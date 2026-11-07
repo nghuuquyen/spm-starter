@@ -5,6 +5,8 @@ title: "[Bug] "
 labels: bug
 ---
 
+<!-- Mẫu cho quy trình xử lý lỗi khi dự án chạy. Môn không yêu cầu tạo bug thật; nếu minh hoạ thì ghi `Mô phỏng`. -->
+
 **Mức độ:** <!-- theo bảng mức độ lỗi trong 09-quality/quality-plan.md -->
 **Liên quan:** FR-XXX-01/AC-01, TS-xx, MS-xx
 **Phiên bản / commit, môi trường:**

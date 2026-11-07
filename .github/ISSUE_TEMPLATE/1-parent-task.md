@@ -5,6 +5,8 @@ title: "[MS-xx] "
 labels: task
 ---
 
+<!-- Parent task là việc trong kế hoạch, để trạng thái open. -->
+
 **FR:** FR-XXX-01, …
 **Milestone:** MS-xx
 **Owner:** <!-- gán người này làm Assignee của issue -->

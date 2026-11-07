@@ -19,12 +19,12 @@ Dev tách được subtask không cần hỏi lại; theo dõi được tiến �
 
 ## Các bước kiểm
 
-1. Milestone trên GitHub có mã `MS-xx`, tên và ngày khớp kế hoạch không? Tên milestone có dễ nhầm với mã module không?
+1. Milestone trên GitHub có mã, tên và ngày khớp kế hoạch không? Dạng mã tuỳ nhóm, nhưng mã milestone không được trùng kiểu với mã module (ví dụ dùng `M1` cho milestone trong khi module là `M01`).
 2. Mọi FR có nằm trong ít nhất một parent task không? FR nào có trong PRD mà không có task?
 3. Lấy mẫu 5 parent task: có FR, `MS-xx`, owner là người thật (assignee), hạn, điều kiện hoàn thành không? Body rỗng là chỗ cần bổ sung.
 4. Nội dung task có khớp PRD không (thời hạn, quy tắc, phạm vi)? Task chép lại nguyên AC thay vì dẫn mã thì dễ lệch khi PRD đổi (Gợi ý thêm).
 5. Có mẫu issue cho bug, feedback, CR không?
-6. Issue đã đóng có lý do hoặc dẫn tới thứ đã làm (PR sửa tài liệu, commit) không?
+6. Parent task là việc trong kế hoạch, nên để open. Issue feedback của môn thì đóng bằng PR sửa tài liệu hoặc kèm lý do. Mẫu feedback dùng cho phản hồi của client, không dùng cho feedback của giảng viên.
 
 ## Câu hỏi để nhóm tự trả lời
 

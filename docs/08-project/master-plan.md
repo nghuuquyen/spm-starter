@@ -21,3 +21,5 @@
 ## Thay đổi kế hoạch
 
 Kế hoạch đã chốt lưu trong `master-plan.xlsx`; mỗi CR được duyệt ghi một dòng vào sheet Change log (phiên bản, ngày, CR, thay đổi), không ghi đè.
+
+Trước khi gửi proposal cho khách lần đầu, nhóm sửa kế hoạch và báo giá trực tiếp; lịch sử sửa nằm trong PR. Sửa theo feedback của giảng viên không phải là change request. Sau khi khách đã nhận proposal, thay đổi phạm vi, giá hoặc mốc do khách yêu cầu (thật hoặc `Mô phỏng`) mới đi qua CR và ghi Change log.

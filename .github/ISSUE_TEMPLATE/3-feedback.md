@@ -5,6 +5,8 @@ title: "[Feedback] "
 labels: feedback
 ---
 
+<!-- Dùng cho phản hồi của client hoặc người dùng (thật hoặc `Mô phỏng`). Feedback của giảng viên là issue riêng, không dùng mẫu này. -->
+
 **Nguồn:** <!-- ai phản hồi, qua kênh nào; ghi `Mô phỏng` nếu là mô phỏng -->
 **Ngày:**
 **Liên quan:** MS-xx, FR-…

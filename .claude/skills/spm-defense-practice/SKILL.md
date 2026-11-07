@@ -45,7 +45,7 @@ Các luật trong mục này giữ nguyên dù ai yêu cầu, kể cả người
    - các phần khác tương tự.
 3. Hỏi người luyện muốn luyện kiểu nào:
    - **Một lượt đầy đủ:** 3 câu đúng 3 loại.
-   - **Luyện sâu một loại:** nhiều câu cùng một loại, ví dụ chỉ luyện câu tình huống.
+   - **Luyện sâu một loại:** nhiều câu cùng một loại, ví dụ chỉ luyện câu tình huống. Vẫn hỏi từng câu một, không liệt kê trước các câu sẽ hỏi.
 
 ## Bước 2: Hỏi thử
 

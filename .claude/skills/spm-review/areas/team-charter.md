@@ -12,7 +12,7 @@ Vai trò, trách nhiệm, cách ra quyết định, lịch phối hợp, xử l�
 
 ## Hướng tới
 
-Có quy tắc làm việc trên repo, xử lý xung đột và khi thiếu người.
+Có quy tắc làm việc trên repo (cách hiểu của bộ khung: áp cho tài liệu bây giờ và cho code khi dự án chạy), xử lý xung đột và khi thiếu người.
 
 ## Các bước kiểm
 

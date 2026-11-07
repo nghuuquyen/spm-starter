@@ -16,6 +16,6 @@ Mã liên quan (FR, AC, Q, MS, CR):
 
 <!-- Ghi ngắn, không chỉ đánh dấu. -->
 
-- Definition of Done (`docs/09-quality/quality-plan.md`): đạt thế nào
+- Đã review theo quy tắc trong Team Charter: ai review
 - Mục lục `docs/README.md` còn đúng đường dẫn không
 - Các nơi dẫn lại mã đã cập nhật (ma trận truy vết, plan, test)

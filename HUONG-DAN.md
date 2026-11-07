@@ -14,11 +14,24 @@ Nhóm làm **tài liệu, kế hoạch và quy trình** cho toàn dự án: prop
 6. Đổi tên hoặc gộp file thì được, nhưng phải sửa `docs/README.md` để chỉ đúng vị trí. **Nội dung không có trong mục lục và không tìm được thì không được tính.**
 7. Mỗi thông tin chỉ có một nơi gốc. Nơi khác dẫn lại bằng mã (`FR-…`, `Q-…`, `MS-…`), không chép lại nội dung. Liên kết chỉ ghi ở một phía, theo cột "Liên kết phải ghi" trong bảng quy ước mã của `docs/README.md`.
 8. Client, feedback, báo cáo và change request được mô phỏng, nhưng phải ghi rõ `Mô phỏng`.
-9. File này chỉ để hướng dẫn, xoá đi khi không cần nữa. Một số quy ước trong bộ khung (cách đặt mã FR, mã giả định `A-xx`, mã cục bộ `BR-01`/`AF-01`/`E-01`, nối WBS với báo giá qua `Q-xx`) là gợi ý để làm cho tiện, không phải yêu cầu của chuẩn.
+9. File này chỉ để hướng dẫn, xoá đi khi không cần nữa. Một số quy ước trong bộ khung (cách đặt mã FR, mã giả định `A-xx`, mã cục bộ `BR-01`/`AF-01`/`E-01`, nối WBS với báo giá qua `Q-xx`, Hạng mục dự phòng bắt đầu bằng "Dự phòng", Owner ghi bằng Assignee, Hạn lấy theo dòng WBS) là gợi ý để làm cho tiện, không phải yêu cầu của chuẩn.
+10. **Khi nào sửa thẳng, khi nào cần change request.** Trước khi gửi proposal cho khách lần đầu (bản v1.0 trong `sent/`), nhóm sửa kế hoạch và báo giá trực tiếp; lịch sử sửa nằm trong PR. **Sửa theo feedback của giảng viên không phải là change request.** Sau khi khách đã nhận proposal, thay đổi phạm vi, giá hoặc mốc do khách yêu cầu (thật hoặc `Mô phỏng`) mới đi qua CR và ghi Change log, sheet Phiên bản.
+11. **Đội dự án trong kế hoạch** là các thành viên nhóm đóng vai trò của mình, với số giờ mỗi tuần giả định. Vai trò thêm (ví dụ thuê tester) ghi `Mô phỏng` ở sheet Resources và chọn một thành viên làm Assignee theo dõi.
+12. **Hai loại issue trên GitHub.** Issue của dự án (parent task, bug, feedback của client, CR) là một phần kế hoạch; parent task để trạng thái open. Issue feedback của giảng viên là riêng: nhóm sửa tài liệu bằng PR có `Closes #n`, hoặc đóng kèm lý do.
+
+## Nên làm gì trước
+
+| Trước | Tập trung |
+| --- | --- |
+| Vòng feedback 1 | Mục lục; proposal và báo giá; tổng quan sản phẩm và danh sách FR; Milestones và WBS; sổ rủi ro; Team Charter |
+| Vòng feedback 2 | FR đủ mẫu, AC cho mọi rule và error flow; kịch bản test; parent task trên GitHub; ma trận truy vết |
+| Vòng feedback 3 | Quy trình chất lượng, sản phẩm, quản trị; xử lý hết issue cũ; luyện bảo vệ |
+
+Mỗi lần xong một phần, chạy `/spm-review <hạng mục>`; trước mỗi vòng, chạy `/spm-review r1`, `r2` hoặc `r3`.
 
 ## Dùng AI với bộ skill
 
-Thư mục `.claude/skills/` có 2 skill để dùng với công cụ AI trong lúc làm bài. Các skill đọc tài liệu chuẩn của môn ở `.claude/spm-standard.md`; thiếu file này thì skill sẽ dừng. `CLAUDE.md` và `AGENTS.md` ở gốc repo ghi các nguyên tắc dùng AI cho cả khi không gọi skill.
+Thư mục `.claude/skills/` có 2 skill để dùng với công cụ AI trong lúc làm bài. Các skill đọc tài liệu chuẩn của môn ở `.claude/spm-standard.md`; thiếu file này thì skill sẽ dừng. `CLAUDE.md` và `AGENTS.md` ở gốc repo ghi các nguyên tắc dùng AI cho cả khi không gọi skill; nhớ chép cả hai file này vào repo của nhóm.
 
 - **Claude Code:** gõ `/tên-skill`, ví dụ `/spm-review prd`.
 - **Công cụ AI khác đọc được file trong repo** (Cursor, Copilot, Codex…): yêu cầu AI đọc `.claude/skills/<skill>/SKILL.md` và làm theo.
@@ -32,12 +45,12 @@ Thư mục `.claude/skills/` có 2 skill để dùng với công cụ AI trong l
 | `/spm-review proposal` | Proposal và báo giá |
 | `/spm-review prd` | PRD: sản phẩm, module, FR, NFR, AC, test. Thêm mã module để review một module, ví dụ `/spm-review prd M02` |
 | `/spm-review plan` | Master Plan và sổ rủi ro |
-| `/spm-review github` | Milestones, Issues, mẫu issue/PR, PR, release |
+| `/spm-review github` | Milestones, parent task, mẫu issue và PR |
 | `/spm-review team-charter` | Team Charter |
-| `/spm-review quality` | Kế hoạch chất lượng và kết quả test |
+| `/spm-review quality` | Quy trình quản lý chất lượng (QA, QC, DoD, mức độ lỗi, điều kiện release) |
 | `/spm-review product` | Quản lý sản phẩm sau bàn giao |
 | `/spm-review governance` | Báo cáo, giám sát, change request |
-| `/spm-review consistency FR-…` | Lần một tính năng qua báo giá → PRD → plan → task → test → báo cáo |
+| `/spm-review consistency FR-…` | Lần một tính năng qua báo giá → PRD → plan → task → kịch bản test |
 | `/spm-review overview` | Toàn bộ repo, chọn ra những góp ý quan trọng nhất |
 | `/spm-review r1` | Trước vòng feedback 1: lỗi lớn (hiểu sai bài toán, thiếu tài liệu, milestone không giao được phần chạy được, mâu thuẫn lớn về giá hoặc plan) |
 | `/spm-review r2` | Trước vòng feedback 2: liên kết (chuỗi báo giá → PRD → plan → task → test; mỗi rule và error flow có AC) |

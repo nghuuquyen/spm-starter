@@ -10,7 +10,7 @@
 
 ## Definition of Done
 
-<!-- DoD áp cho mọi việc (đã review, tài liệu cập nhật…); AC áp riêng cho từng FR; điều kiện release áp cho cả bản giao. Ghi DoD thành các điều kiện kiểm được. -->
+<!-- DoD áp cho mọi việc của dự án trong kế hoạch (ví dụ đã review, đạt AC liên quan, tài liệu cập nhật); AC áp riêng cho từng FR; điều kiện release áp cho cả bản giao. Ghi DoD thành các điều kiện kiểm được. -->
 
 - 
 

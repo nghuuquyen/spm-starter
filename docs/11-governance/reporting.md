@@ -4,4 +4,4 @@
 | --- | --- | --- | --- | --- | --- |
 | | | | | | |
 
-<!-- Báo cáo nên giải thích chênh lệch giữa kế hoạch đã chốt (master-plan.xlsx) và tiến độ trên GitHub. Có thể đặt sẵn một mẫu báo cáo ngắn ngay dưới bảng. -->
+<!-- Đây là quy trình báo cáo khi dự án chạy. Mẫu báo cáo nên có phần so kế hoạch đã chốt (master-plan.xlsx) với tiến độ trên GitHub. Có thể đặt sẵn một mẫu ngắn ngay dưới bảng; báo cáo ví dụ thì ghi `Mô phỏng`. -->

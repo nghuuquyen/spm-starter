@@ -17,8 +17,8 @@ Chỉ số theo dõi lấy được từ GitHub; có ngưỡng escalate; CR có 
 
 ## Các bước kiểm
 
-1. Mỗi loại báo cáo có đủ: ai lập, gửi cho ai, khi nào, nội dung? Báo cáo có giải thích chênh lệch giữa kế hoạch và tiến độ không?
-2. Chỉ số theo dõi: lấy từ đâu? Với cách nhóm đang dùng GitHub (assignee, milestone, nhãn), có đếm được chỉ số đó không?
+1. Mỗi loại báo cáo có đủ: ai lập, gửi cho ai, khi nào, nội dung? Mẫu báo cáo có phần so kế hoạch đã chốt với tiến độ khi dự án chạy không? Không đòi số liệu thực tế.
+2. Chỉ số theo dõi: lấy từ đâu, bằng cách nào (ví dụ bộ lọc issue)? Với cách nhóm đang dùng GitHub (assignee, milestone, nhãn), khi dự án chạy có đếm được chỉ số đó không?
 3. Ngưỡng escalate: con số cụ thể nào thì escalate, tới ai?
 4. Quy trình CR:
    - các bước;
