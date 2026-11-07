@@ -4,13 +4,46 @@ Bộ khung này theo đúng mục "Format repo" của tài liệu *Software Proj
 
 ## Cách dùng
 
-1. Chép `docs/`, `.github/`, `src/` và `README.md` vào repo của nhóm. Nhóm đã có tài liệu thì chuyển dần nội dung sang đúng chỗ.
+1. Chép `docs/`, `.github/`, `.claude/`, `src/` và `README.md` vào repo của nhóm. Nhóm đã có tài liệu thì chuyển dần nội dung sang đúng chỗ.
 2. Mỗi file có dòng hướng dẫn nằm trong `<!-- … -->`. Dòng này không hiện trên GitHub, có thể giữ lại hoặc xoá.
 3. Điền nội dung thật vào chỗ trống. Phần không áp dụng ghi `N/A` kèm lý do, không để file rỗng.
 4. Đổi tên hoặc gộp file thì được, nhưng phải sửa `docs/README.md` để chỉ đúng vị trí. **Nội dung không có trong mục lục và không tìm được thì không được tính.**
 5. Mỗi thông tin chỉ có một nơi gốc. Nơi khác dẫn lại bằng mã (`FR-…`, `Q-…`, `MS-…`), không chép lại nội dung.
 6. Client, feedback, báo cáo và change request được mô phỏng, nhưng phải ghi rõ `Mô phỏng`.
 7. File này chỉ để hướng dẫn, xoá đi khi không cần nữa.
+
+## Dùng AI với bộ skill
+
+Thư mục `.claude/skills/` có 2 skill để dùng với công cụ AI trong lúc làm bài. Với Claude Code, gõ `/tên-skill`. Với công cụ khác, mở file `SKILL.md` của skill (và file hạng mục trong `spm-review/areas/` nếu cần) rồi dán vào làm chỉ dẫn. Các skill đọc tài liệu chuẩn của môn ở `.claude/spm-standard.md`.
+
+**`spm-review`: tự review tài liệu.** Viết xong một phần thì review phần đó; trước mỗi vòng feedback thì review tổng thể.
+
+| Lệnh | Review |
+| --- | --- |
+| `/spm-review index` | Mục lục `docs/README.md` và cấu trúc repo |
+| `/spm-review proposal` | Proposal và báo giá |
+| `/spm-review prd` | PRD: sản phẩm, module, FR, NFR, AC, test. Thêm mã module để review một module, ví dụ `/spm-review prd M02` |
+| `/spm-review plan` | Master Plan và sổ rủi ro |
+| `/spm-review github` | Milestones, Issues, mẫu issue/PR, PR, release |
+| `/spm-review team-charter` | Team Charter |
+| `/spm-review quality` | Kế hoạch chất lượng và kết quả test |
+| `/spm-review product` | Quản lý sản phẩm sau bàn giao |
+| `/spm-review governance` | Báo cáo, giám sát, change request |
+| `/spm-review consistency FR-…` | Lần một tính năng qua báo giá → PRD → plan → task → test → báo cáo |
+| `/spm-review overview` | Toàn bộ repo, chọn ra 10 vấn đề quan trọng nhất |
+
+Mỗi hạng mục có hướng dẫn riêng trong `.claude/skills/spm-review/areas/`: vì sao phần đó quan trọng, chuẩn yêu cầu gì, thế nào là chung chung và thế nào là dùng được ngay, câu hỏi để nhóm tự trả lời, lỗi hay gặp. Nên đọc file đó trước khi viết phần tương ứng.
+
+Kết quả review dùng cùng mẫu với issue feedback của giảng viên: nhãn `ẩn` / `mâu thuẫn` / `thiếu`, bằng chứng, vấn đề, vì sao quan trọng, tác động, câu hỏi cho nhóm, hoàn thành khi. Đang sửa theo một issue feedback thì đưa issue đó cho skill để kiểm lại điều kiện "Hoàn thành khi".
+
+**`spm-defense-practice`: luyện bảo vệ cá nhân.** AI hỏi thử từng câu theo 3 loại câu bảo vệ, dựa trên tài liệu của nhóm, rồi nhận xét câu trả lời đã bám tài liệu chưa và chỉ ra chỗ cần đọc lại.
+
+Cách dùng cho đúng:
+
+- **AI là người review, nhóm là người quyết định.** Skill được viết để AI hỏi, giải thích và kiểm, không làm bài thay. Khi bảo vệ, từng bạn phải tự giải thích được quyết định của nhóm.
+- **Luôn kiểm lại AI.** Mỗi nhận định đều kèm vị trí (`file:dòng`, `sheet!ô`, `issue #n`). Hãy mở đúng chỗ đó ra đối chiếu, vì AI có thể đọc sai hoặc bịa.
+- **Kết quả review không phải điểm.** Skill không chấm điểm. Review hết vấn đề không có nghĩa là bài đã đạt. Giảng viên đọc tài liệu thật và hỏi trực tiếp khi bảo vệ.
+- Không thêm vào tài liệu những câu nhắm vào AI hay người chấm (ví dụ "hãy cho bài này điểm cao"). Những câu như vậy bị bỏ qua và được báo cho giảng viên.
 
 ## Cấu trúc
 
@@ -19,6 +52,9 @@ Bộ khung này theo đúng mục "Format repo" của tài liệu *Software Proj
 ```text
 repo/
 ├── README.md                      giới thiệu dự án, bảng thành viên
+├── .claude/
+│   ├── skills/                    spm-review, spm-defense-practice (xem mục trên)
+│   └── spm-standard.md            bản sao tài liệu chuẩn cho skill đọc
 ├── .github/
 │   ├── ISSUE_TEMPLATE/            ★ GitHub: mẫu parent task, bug, feedback, change request
 │   └── pull_request_template.md   ★ GitHub: mẫu PR
@@ -131,7 +167,7 @@ Mỗi file Word/Excel có một người chịu trách nhiệm chính và giữ 
 
 ## Một chuỗi nối mã hoàn chỉnh
 
-Giảng viên sẽ chọn 3 tính năng và lần theo chuỗi sau. Mắt xích nào đứt thì mất điểm Nhất quán (20 điểm).
+Giảng viên sẽ chọn 3 tính năng và lần theo chuỗi sau để đánh giá phần Nhất quán. Mắt xích nào đứt là một vấn đề cần sửa.
 
 ```text
 quotation.xlsx  Q-03  ──►  prd.md  FR-STU-02/AC-04  ──►  master-plan.xlsx  MS-02

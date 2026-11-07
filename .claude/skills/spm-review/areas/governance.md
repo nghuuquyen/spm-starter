@@ -1,0 +1,47 @@
+# Review: Quản trị và giám sát
+
+Đọc: `docs/11-governance/` (reporting, monitoring, change-control, reports/) hoặc vị trí mục lục chỉ tới; đối chiếu GitHub và `master-plan.xlsx`.
+
+## Vì sao quan trọng
+
+Quản trị trả lời: ai biết gì, khi nào, và khi lệch kế hoạch thì ai hành động. Không có ngưỡng escalate thì vấn đề chỉ được báo khi đã muộn. Không có quy trình CR thì mỗi yêu cầu thay đổi là một cuộc cãi nhau, và tài liệu lệch nhau dần.
+
+## Chuẩn yêu cầu
+
+- Ai báo cáo gì, cho ai, khi nào; chỉ số theo dõi; ngưỡng escalate; quy trình change request; báo cáo cho milestone thực hiện.
+- `master-plan.xlsx` lưu mốc đã chốt, GitHub thể hiện thực tế, báo cáo giải thích chênh lệch.
+- Change request `CR-xx` là GitHub Issue, ghi tài liệu và task đã cập nhật. Chưa có CR thật không bị trừ nếu quy trình rõ và áp dụng được.
+
+## Mục tiêu chất lượng
+
+- Chung chung: lịch họp và báo cáo chung chung.
+- Cụ thể: rõ ai báo gì, cho ai, khi nào; CR có người duyệt.
+- Dùng được ngay: theo dõi bằng số liệu từ GitHub; có ngưỡng escalate; CR có đánh giá tác động và cập nhật đồng bộ.
+
+## Các bước kiểm
+
+1. Mỗi loại báo cáo có đủ: ai lập, gửi cho ai, khi nào, nội dung, lưu ở đâu?
+2. Chỉ số theo dõi: lấy được từ đâu? Có chỉ số lấy trực tiếp từ GitHub (task theo milestone, task trễ hạn, bug theo mức độ) không? Với dữ liệu GitHub hiện tại, nhóm có tính được chỉ số đó không?
+3. Ngưỡng escalate: con số cụ thể nào thì escalate, tới ai?
+4. Quy trình CR:
+   - các bước;
+   - đánh giá tác động lên phạm vi, effort, giá, timeline, rủi ro, test;
+   - **người duyệt cụ thể**;
+   - danh sách tài liệu phải cập nhật đồng bộ;
+   - ghi Change log.
+5. CR có dùng mẫu issue "Change request" không? CR thật (nếu có) có làm đúng quy trình không?
+6. **Milestone thực hiện:** có ít nhất một báo cáo giải thích chênh lệch giữa kế hoạch và GitHub không? Báo cáo mô phỏng có ghi `Mô phỏng` không?
+7. CR, sổ rủi ro, báo cáo có nằm trong repo không, hay để ngoài mà mục lục không chỉ tới?
+
+## Câu hỏi để nhóm tự trả lời
+
+- Hôm nay milestone thực hiện đang xanh, vàng hay đỏ? Nhóm trả lời bằng số liệu nào trên GitHub?
+- Client muốn thêm một bước duyệt vào luồng chính sau `MS-01`. Đi qua quy trình CR của nhóm từng bước, tài liệu nào phải sửa?
+
+## Lỗi hay gặp
+
+- Báo cáo có tần suất nhưng không rõ gửi cho ai.
+- Chỉ số chung chung, không lấy từ GitHub; hoặc GitHub không có assignee và hạn nên không tính được.
+- Không có ngưỡng escalate.
+- Không có quy trình CR, hoặc người duyệt chỉ ghi "ban quản lý".
+- CR, rủi ro, báo cáo để trên công cụ ngoài, repo không có.
