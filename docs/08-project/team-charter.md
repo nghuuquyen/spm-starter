@@ -1,10 +1,16 @@
 # Team Charter
 
-<!-- Hướng dẫn: gắn vai trò với người thật trong nhóm. Mỗi mục là quy tắc nhóm thực sự làm theo. -->
+<!-- Hướng dẫn: thành viên nhóm là ban quản lý dự án; đội thực thi (BA, dev, QA…) là giả định. Mỗi mục là quy tắc dự án thực sự làm theo. -->
 
-## Vai trò và trách nhiệm
+## Ban quản lý dự án
 
-| Thành viên | Vai trò | Trách nhiệm chính | Người dự phòng |
+| Thành viên | Mảng phụ trách | Trách nhiệm chính | Người dự phòng |
+| --- | --- | --- | --- |
+| | | | |
+
+## Đội thực thi (Mô phỏng)
+
+| Vai trò | Số người | Trách nhiệm chính | Báo cáo cho |
 | --- | --- | --- | --- |
 | | | | |
 

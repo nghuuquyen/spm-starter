@@ -20,7 +20,7 @@ Dùng trước vòng feedback 1. Theo chuẩn, vòng 1 tập trung vào **lỗi 
 5. **Giá và kế hoạch có mâu thuẫn lớn không:**
    - tổng giá có giống nhau ở mọi nơi nhắc tới không;
    - danh sách và ngày milestone có giống nhau giữa proposal, kế hoạch và GitHub không;
-   - tổng nguồn lực có đủ cho tổng effort không. Nếu nguồn lực chỉ là vai trò, hỏi nhóm ai đảm nhận vai trò nào, không tự gán vai trò cho người; được cộng số giờ đã có để kiểm.
+   - tổng nguồn lực có đủ cho tổng effort không. Đội thực thi là giả định, nên nguồn lực theo vai trò là hợp lệ; được cộng số giờ đã có để kiểm.
 
 ## Chọn góp ý
 

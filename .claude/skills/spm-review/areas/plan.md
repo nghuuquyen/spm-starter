@@ -26,11 +26,11 @@ Có cách client kiểm tra, cách nhận feedback, năng lực dự phòng; r�
 3. Mỗi milestone có điều kiện nghiệm thu kiểm được và cách client kiểm tra không?
 4. **Chỉ một bộ mốc:** danh sách và ngày milestone có giống nhau ở proposal, kế hoạch, GitHub và các tài liệu khác không?
 5. **WBS:** mỗi dòng có milestone, liên kết tới báo giá hoặc FR (bộ khung dùng `Q-xx`; nhóm dùng cách khác lần được cũng được), effort, owner, ngày không? Có việc cho tích hợp, test, regression, sửa lỗi không? Tích hợp có bị dồn hết vào milestone cuối không?
-6. **Resources:** tổng giờ nguồn lực có đủ cho tổng effort không, có ai bị giao quá sức không? Nguồn lực là người thật trong nhóm hay vai trò mô phỏng có ghi rõ? Nếu chỉ có vai trò, hỏi nhóm ai đảm nhận vai trò nào, không tự gán vai trò cho người; được cộng số giờ đã có để kiểm.
+6. **Resources:** tổng giờ nguồn lực có đủ cho tổng effort không, có ai bị giao quá sức không? Đội thực thi là giả định: vai trò, số người, giờ mỗi tuần đã khai báo rõ và ghi `Mô phỏng` chưa? Không đòi gắn vai trò thực thi cho thành viên nhóm (thành viên nhóm là ban quản lý). Được cộng số giờ đã có để kiểm.
 7. **Gantt:** vẽ từ ngày trong ô hay tô màu tay? Có phụ thuộc giữa các việc không?
 8. **Dự phòng:** effort cho test, regression, sửa lỗi đã nằm trong WBS và báo giá chưa (đây là việc biết trước)? Phần chừa cho CR và rủi ro (việc chưa biết trước) là bao nhiêu, nằm ở đâu, có bị tính trùng với effort sửa lỗi không?
 9. **Change log:** có dòng phiên bản đầu tiên không? Kế hoạch đã đổi mà Change log không có dòng nào là chỗ cần bổ sung.
-10. **Rủi ro:** có đủ 6 thông tin không? Có rủi ro phần mềm thật của dự án (tích hợp, dữ liệu, hiệu năng, phụ thuộc bên ngoài, thiếu người) hay chỉ rủi ro chung chung? Owner có phải người thật không? Phương án có làm được không?
+10. **Rủi ro:** có đủ 6 thông tin không? Có rủi ro phần mềm thật của dự án (tích hợp, dữ liệu, hiệu năng, phụ thuộc bên ngoài, thiếu người) hay chỉ rủi ro chung chung? Owner có cụ thể không (một thành viên ban quản lý hoặc một vai trò)? Phương án có làm được không?
 
 ## Câu hỏi để nhóm tự trả lời
 

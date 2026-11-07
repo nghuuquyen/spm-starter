@@ -21,7 +21,7 @@ Dev tách được subtask không cần hỏi lại; theo dõi được tiến �
 
 1. Milestone trên GitHub có mã, tên và ngày khớp kế hoạch không? Dạng mã tuỳ nhóm, nhưng mã milestone không được trùng kiểu với mã module (ví dụ dùng `M1` cho milestone trong khi module là `M01`).
 2. Mọi FR có nằm trong ít nhất một parent task không? FR nào có trong PRD mà không có task?
-3. Lấy mẫu 5 parent task: có FR, `MS-xx`, owner là người thật (assignee), hạn, điều kiện hoàn thành không? Body rỗng là chỗ cần bổ sung.
+3. Lấy mẫu 5 parent task: có FR, `MS-xx`, owner, hạn, điều kiện hoàn thành không? Owner là một vai trò trong đội thực thi giả định là được (ví dụ `BE Dev 1`), miễn vai trò đó có trong khai báo nguồn lực; owner trống mới là thiếu. Body rỗng là chỗ cần bổ sung.
 4. Nội dung task có khớp PRD không (thời hạn, quy tắc, phạm vi)? Task chép lại nguyên AC thay vì dẫn mã thì dễ lệch khi PRD đổi (Gợi ý thêm).
 5. Có mẫu issue cho bug, feedback, CR không?
 6. Parent task là việc trong kế hoạch, nên để open. Issue feedback của môn thì đóng bằng PR sửa tài liệu hoặc kèm lý do. Mẫu feedback dùng cho phản hồi của client, không dùng cho feedback của giảng viên.
@@ -34,6 +34,6 @@ Dev tách được subtask không cần hỏi lại; theo dõi được tiến �
 ## Chỗ hay bị sót
 
 - Issue chỉ có tiêu đề, body rỗng, không assignee, không hạn.
-- Owner ghi vai trò ("Backend Dev") thay vì người thật.
+- Owner trống, hoặc ghi vai trò không có trong khai báo đội thực thi.
 - Milestone không có ngày, không có mô tả, mã khác với kế hoạch.
 - Không có mẫu issue.

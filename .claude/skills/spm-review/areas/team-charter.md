@@ -16,9 +16,9 @@ Có quy tắc làm việc trên repo (cách hiểu của bộ khung: áp cho tà
 
 ## Các bước kiểm
 
-1. Vai trò có gắn với người thật trong nhóm không? Số vai trò nhiều hơn số người thì ai kiêm gì?
+1. Ban quản lý dự án (các thành viên nhóm): mỗi bạn phụ trách mảng nào, ai dự phòng cho ai? Đội thực thi giả định: có những vai trò nào, bao nhiêu người, trách nhiệm gì, báo cáo cho ai? Không đòi gắn vai trò thực thi cho thành viên nhóm.
 2. Trách nhiệm có cụ thể không? Ai chịu trách nhiệm chính từng file Word/Excel, từng tài liệu?
-3. Cách ra quyết định: loại quyết định nào ai quyết, khi không thống nhất thì làm gì? Quy tắc biểu quyết có khớp số người thật không?
+3. Cách ra quyết định: loại quyết định nào ai quyết, khi không thống nhất thì làm gì? Quy tắc biểu quyết có khớp số người tham gia quyết định không?
 4. Lịch phối hợp: họp khi nào, qua kênh nào, cập nhật tiến độ ở đâu?
 5. Xử lý xung đột có các bước cụ thể không?
 6. Khi thiếu người: ai dự phòng cho ai?

@@ -22,14 +22,14 @@ Tài liệu và kế hoạch làm đủ cho toàn dự án; không yêu cầu l�
 | Code, subtask, code review, kết quả test, demo, release note | Không yêu cầu |
 
 - Client, feedback, báo cáo và change request được phép mô phỏng, nhưng phải ghi rõ `Mô phỏng`, không trình bày như dữ liệu thật.
-- Điểm dựa trên chất lượng tài liệu và kế hoạch. Không bị trừ vì chưa có code, kết quả test hay release.
+- Điểm dựa trên chất lượng tài liệu và kế hoạch. Không bị trừ vì chưa có code, kết quả test hay release. Tiêu chí nào nhắc tới code, release, tiến độ hay subtask thì được đánh giá ở mức kế hoạch và quy trình: đã quy định rõ và áp dụng được khi dự án chạy.
 
 ## Quy trình
 
 Có 3 vòng feedback, mỗi vòng một trọng tâm, rồi chốt bản cuối để chấm. Lịch dưới đây tính từ ngày công bố và sẽ được thay bằng ngày cụ thể.
 
 1. **Ngày 1, công bố:** các nhóm nhận tài liệu này. Giảng viên lưu bản hiện tại để so tiến bộ, không dùng để chấm.
-2. **Ngày 2–3, vòng 1, lỗi lớn:** hiểu sai bài toán, thiếu tài liệu, milestone không giao được phần chạy được, mâu thuẫn lớn về giá hoặc plan.
+2. **Ngày 2–3, vòng 1, lỗi lớn:** hiểu sai bài toán, thiếu tài liệu, milestone trong kế hoạch không giao được phần chạy được, mâu thuẫn lớn về giá hoặc plan.
 3. **Ngày 4–6:** nhóm sửa bằng PR.
 4. **Ngày 7, vòng 2, liên kết:** chuỗi từ báo giá, PRD, plan, task đến test có khớp không; mỗi rule và error flow có AC chưa.
 5. **Ngày 8–9:** nhóm sửa bằng PR.

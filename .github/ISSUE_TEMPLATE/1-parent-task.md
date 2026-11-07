@@ -9,7 +9,7 @@ labels: task
 
 **FR:** FR-XXX-01, …
 **Milestone:** MS-xx
-**Owner:** <!-- gán người này làm Assignee của issue -->
+**Owner:** <!-- vai trò trong đội thực thi giả định, ví dụ BE Dev 1; khớp với cột Owner ở WBS. Có thể gán thành viên ban quản lý theo dõi task làm Assignee. -->
 **Hạn:** <!-- lấy theo ngày Kết thúc của dòng WBS tương ứng; có thể đặt ở trường ngày của GitHub Projects -->
 **WBS:** <!-- tuỳ chọn: mã dòng WBS, để so kế hoạch với GitHub theo từng việc -->
 

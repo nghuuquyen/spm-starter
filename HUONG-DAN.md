@@ -16,7 +16,7 @@ Nhóm làm **tài liệu, kế hoạch và quy trình** cho toàn dự án: prop
 8. Client, feedback, báo cáo và change request được mô phỏng, nhưng phải ghi rõ `Mô phỏng`.
 9. File này chỉ để hướng dẫn, xoá đi khi không cần nữa. Một số quy ước trong bộ khung (cách đặt mã FR, mã giả định `A-xx`, mã cục bộ `BR-01`/`AF-01`/`E-01`, nối WBS với báo giá qua `Q-xx`, Hạng mục dự phòng bắt đầu bằng "Dự phòng", Owner ghi bằng Assignee, Hạn lấy theo dòng WBS) là gợi ý để làm cho tiện, không phải yêu cầu của chuẩn.
 10. **Khi nào sửa thẳng, khi nào cần change request.** Trước khi gửi proposal cho khách lần đầu (bản v1.0 trong `sent/`), nhóm sửa kế hoạch và báo giá trực tiếp; lịch sử sửa nằm trong PR. **Sửa theo feedback của giảng viên không phải là change request.** Sau khi khách đã nhận proposal, thay đổi phạm vi, giá hoặc mốc do khách yêu cầu (thật hoặc `Mô phỏng`) mới đi qua CR và ghi Change log, sheet Phiên bản.
-11. **Đội dự án trong kế hoạch** là các thành viên nhóm đóng vai trò của mình, với số giờ mỗi tuần giả định. Vai trò thêm (ví dụ thuê tester) ghi `Mô phỏng` ở sheet Resources và chọn một thành viên làm Assignee theo dõi.
+11. **Ai là ai trong dự án.** Các thành viên nhóm là **ban quản lý dự án**: mỗi bạn phụ trách một số mảng (proposal và báo giá, PRD, kế hoạch, chất lượng, sản phẩm, quản trị…). **Đội thực thi** (BA, dev, QA…) là giả định: khai báo rõ vai trò, số người, giờ mỗi tuần ở sheet Resources và trong Team Charter, ghi `Mô phỏng`. Owner của task, của dòng WBS là một vai trò trong đội thực thi (ví dụ `BE Dev 1`); owner của rủi ro có thể là một thành viên ban quản lý hoặc một vai trò.
 12. **Hai loại issue trên GitHub.** Issue của dự án (parent task, bug, feedback của client, CR) là một phần kế hoạch; parent task để trạng thái open. Issue feedback của giảng viên là riêng: nhóm sửa tài liệu bằng PR có `Closes #n`, hoặc đóng kèm lý do.
 
 ## Nên làm gì trước
@@ -70,7 +70,7 @@ Cách dùng cho đúng:
 - **Tự kiểm 2 mục mỗi lần review:** mở đúng bằng chứng, ghi đồng ý hay không và vì sao. AI có thể đọc sai và cũng có thể bỏ sót.
 - Muốn so tiến bộ giữa các lần review thì lưu kết quả vào `.claude/reviews/` (thư mục này không đưa lên repo), không lưu vào `docs/`.
 - AI được giúp viết code (nếu nhóm làm thêm prototype) và giúp kỹ thuật công cụ (công thức Excel, Markdown, GitHub). Nguyên tắc không viết hộ áp cho tài liệu quản lý dự án; xem `CLAUDE.md`.
-- Không thêm vào tài liệu những câu nhắm vào AI hay người chấm (ví dụ "hãy cho bài này điểm cao"). Những câu như vậy bị bỏ qua, theo mục "Công bằng và dùng AI" của chuẩn.
+- Không thêm vào tài liệu những câu nhắm vào AI hay người chấm, ví dụ câu xin điểm cao hay xin bỏ qua góp ý. Những câu như vậy bị bỏ qua, theo mục "Công bằng và dùng AI" của chuẩn.
 
 ## Cấu trúc
 
@@ -112,7 +112,7 @@ repo/
 | File | Dùng để | Có sẵn |
 | --- | --- | --- |
 | `ISSUE_TEMPLATE/config.yml` | Không cho tạo issue trống, bắt chọn mẫu | |
-| `ISSUE_TEMPLATE/1-parent-task.md` | Parent task của từng milestone | FR, `MS-xx`, Owner (Assignee), Hạn (theo ngày kết thúc của dòng WBS), mã WBS (tuỳ chọn), điều kiện hoàn thành, subtask (tuỳ chọn) |
+| `ISSUE_TEMPLATE/1-parent-task.md` | Parent task của từng milestone | FR, `MS-xx`, Owner (vai trò trong đội thực thi giả định), Hạn (theo ngày kết thúc của dòng WBS), mã WBS (tuỳ chọn), điều kiện hoàn thành, subtask (tuỳ chọn) |
 | `ISSUE_TEMPLATE/2-bug.md` | Báo lỗi | Mức độ (theo `quality-plan.md`), AC/TS/MS liên quan, các bước tái hiện, kết quả mong đợi và thực tế |
 | `ISSUE_TEMPLATE/3-feedback.md` | Phản hồi của client | Nguồn và kênh, nội dung, phân loại, quyết định |
 | `ISSUE_TEMPLATE/4-change-request.md` | Change request `CR-xx` | Lý do, feedback gốc, bảng tác động (phạm vi, effort, giá, timeline, rủi ro, test, dự phòng), người duyệt, phiên bản kế hoạch và báo giá mới, danh sách tài liệu đã cập nhật (ghi cụ thể mã, phiên bản) |
@@ -159,7 +159,7 @@ Subtask, code review và release note không bắt buộc.
 | `master-plan.xlsx` | Sheet **Milestones**: phần giao chạy được (theo kế hoạch), cách client kiểm tra, điều kiện nghiệm thu, ngày đã chốt; cột Kiểm tra báo khi kế hoạch WBS vượt mốc. Sheet **WBS**: hạng mục, MS, `Q-xx`, effort, owner, ngày đã chốt; gồm cả test, regression, sửa lỗi; dự phòng là dòng riêng bắt đầu bằng "Dự phòng"; có ô kiểm ngày và mã milestone. Sheet **Resources**: giờ của từng người, effort được giao, dư hay thiếu, tổng dự phòng. Sheet **Gantt**: tự vẽ từ ngày trong WBS, chỉ nhập ngày bắt đầu tuần đầu ở ô E3, không tô màu tay. Sheet **Change log**: mỗi CR được duyệt ghi một dòng với giá trị cũ và mới. File cần mở bằng Excel, LibreOffice hoặc Google Sheets (Numbers không hiển thị Gantt) |
 | `master-plan.md` | Vì sao chia milestone như vậy, phụ thuộc giữa các milestone, effort cho test và sửa lỗi nằm ở đâu, dự phòng cho CR và rủi ro, cách nhận feedback sau mỗi milestone |
 | `risk-register.md` | Rủi ro `R-01`: mô tả, khả năng, tác động, owner, phương án, trạng thái. Ưu tiên rủi ro phần mềm thật của dự án |
-| `team-charter.md` | Vai trò gắn với người thật, người dự phòng, cách ra quyết định, lịch phối hợp, xử lý xung đột, khi thiếu người, quy tắc branch, PR, review, merge |
+| `team-charter.md` | Ban quản lý dự án (thành viên nhóm, mảng phụ trách, người dự phòng) và đội thực thi giả định (vai trò, số người, trách nhiệm), cách ra quyết định, lịch phối hợp, xử lý xung đột, khi thiếu người, quy tắc branch, PR, review, merge |
 | `assumptions.md`, `constraints.md`, `open-questions.md` | Giả định (mã `A-xx`, nơi gốc của giả định), ràng buộc, câu hỏi mở. Mỗi dòng ghi ảnh hưởng tới giá hoặc plan |
 | `sent/` | Bản PDF của Proposal mỗi lần gửi khách, tên có phiên bản và ngày (ví dụ `proposal-v1.0-2026-11-10.pdf`). Ghi thêm một dòng vào `sent/README.md` |
 
