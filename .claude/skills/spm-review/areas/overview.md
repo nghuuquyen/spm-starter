@@ -12,15 +12,7 @@ Dùng trước mỗi vòng feedback hoặc trước khi nộp. Mục tiêu: ch�
 
 ## Chọn góp ý
 
-Ưu tiên theo thứ tự:
-
-1. Hiểu sai bài toán, hoặc phạm vi mâu thuẫn với goals và non-goals.
-2. Chuỗi nối bị đứt (không có báo giá theo hạng mục, task không khớp PRD, test không trỏ AC).
-3. Mâu thuẫn về giá hoặc kế hoạch (hai con số giá, hai bộ mốc).
-4. Milestone không giao được phần chạy được.
-5. Thiếu tài liệu hoặc thiếu phần bắt buộc.
-6. Nội dung có nhưng khó tìm (nhãn `ẩn`).
-7. Trình bày.
+Dùng thứ tự ưu tiên chung trong `SKILL.md`. Tối đa 10 mục "Cần bổ sung".
 
 Gộp các chỗ cùng gốc thành một góp ý. Ví dụ "29 FR đều chưa có Priority" là một góp ý, không phải 29. Ghi nhận rõ những phần nhóm đã làm tốt trước khi nêu góp ý.
 
@@ -30,6 +22,6 @@ Thêm một bảng ngắn, mỗi hạng mục một dòng:
 
 | Hạng mục | Tình trạng | Việc nên làm tiếp |
 | --- | --- | --- |
-| proposal | đã có đủ / còn thiếu / chưa có | `/spm-review proposal` để xem chi tiết |
+| proposal | chưa thấy thiếu (kiểm nhanh) / còn thiếu / chưa có | `/spm-review proposal` để xem chi tiết |
 
-Cột tình trạng chỉ mô tả có hay thiếu, **không phải đánh giá hay điểm số**. Gợi ý nhóm chạy review riêng từng hạng mục còn thiếu để xem chi tiết.
+Cột tình trạng chỉ mô tả có hay thiếu sau một lượt kiểm nhanh, **không phải kết luận đạt, không phải đánh giá hay điểm số**. Gợi ý nhóm chạy review riêng từng hạng mục còn thiếu để xem chi tiết.

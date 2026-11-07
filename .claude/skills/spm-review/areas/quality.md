@@ -1,6 +1,6 @@
 # Review: Quality
 
-Đọc: `docs/09-quality/quality-plan.md`, `docs/09-quality/test-results/`, `docs/06-acceptance/test-scenarios.md` (hoặc vị trí mục lục chỉ tới).
+Tìm theo mục lục của nhóm. Vị trí trong bộ khung: `docs/09-quality/quality-plan.md`, `docs/09-quality/test-results/`, `docs/06-acceptance/test-scenarios.md` (hoặc vị trí mục lục chỉ tới).
 
 ## Vì sao quan trọng
 

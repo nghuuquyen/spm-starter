@@ -1,6 +1,6 @@
 # Review: Proposal và báo giá
 
-Đọc: `docs/08-project/proposal.docx`, `docs/08-project/quotation.xlsx`, `docs/08-project/sent/`, `assumptions.md`, `constraints.md` (hoặc vị trí mục lục chỉ tới).
+Tìm theo mục lục của nhóm. Vị trí trong bộ khung: `docs/08-project/proposal.docx`, `docs/08-project/quotation.xlsx`, `docs/08-project/sent/`, `assumptions.md`, `constraints.md` (hoặc vị trí mục lục chỉ tới).
 
 ## Vì sao quan trọng
 

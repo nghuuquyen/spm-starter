@@ -20,6 +20,8 @@
 
 ## Điều kiện release
 
+<!-- Điều kiện kiểm được, ví dụ: số lỗi còn mở theo từng mức, tỷ lệ TS đạt, bộ regression đã chạy đạt, ai ký duyệt. -->
+
 ## Bằng chứng áp dụng ở milestone thực hiện
 
 <!-- Link tới `test-results/`, PR, review, bug đã xử lý của milestone thực hiện. -->

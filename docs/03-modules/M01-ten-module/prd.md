@@ -1,9 +1,11 @@
 # PRD M01: <Tên module>
 
 <!-- Hướng dẫn
-- Mỗi FR có đủ 10 mục dưới đây, đúng tên mục để người đọc tìm được.
+- Mỗi FR có đủ 9 mục của mẫu FR dưới đây, đúng tên mục để người đọc tìm được.
 - Mỗi Business Rule và mỗi Error Flow cần ít nhất một AC.
 - AC phải kiểm tra được (có số, điều kiện, kết quả mong đợi). Mã AC đầy đủ là `FR-XXX-01/AC-01`.
+- Business Rule, Alternative và Error trong một FR đánh mã cục bộ BR-01, A-01, E-01 để cột "Kiểm cho" của bảng AC ghi được rõ (cách đánh mã này là gợi ý của bộ khung).
+- Có thể viết AC theo dạng Cho (điều kiện) / Khi (hành động) / Thì (kết quả).
 - Chép khối FR-XXX-01 cho các FR tiếp theo.
 -->
 
@@ -29,14 +31,14 @@
 
 **Alternative và Error Flows**
 
-- Alternative:
-- Error:
+- A-01:
+- E-01:
 
 **Acceptance Criteria**
 
 | Mã | Tiêu chí | Kiểm cho |
 | --- | --- | --- |
-| `FR-XXX-01/AC-01` | | BR-01 / luồng chính / error … |
+| `FR-XXX-01/AC-01` | | BR-01 / E-01 / luồng chính |
 
 **Edge Case**
 

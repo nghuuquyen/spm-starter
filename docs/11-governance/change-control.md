@@ -12,6 +12,8 @@
 
 ## Người duyệt
 
+<!-- Ai duyệt loại thay đổi nào. Ví dụ: đổi phạm vi, giá hoặc mốc giao thì client duyệt (ghi Mô phỏng nếu là mô phỏng); thay đổi nội bộ không ảnh hưởng client thì PM duyệt. -->
+
 ## Cập nhật đồng bộ khi CR được duyệt
 
 <!-- Những tài liệu/task phải cập nhật: PRD, quotation.xlsx, master-plan.xlsx (Change log), issue, test… -->

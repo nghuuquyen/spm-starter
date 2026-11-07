@@ -1,6 +1,6 @@
 # Review: Master Plan và rủi ro
 
-Đọc: `docs/08-project/master-plan.xlsx` (sheet Milestones, WBS, Resources, Gantt, Change log), `master-plan.md`, `risk-register.md` (hoặc vị trí mục lục chỉ tới).
+Tìm theo mục lục của nhóm. Vị trí trong bộ khung: `docs/08-project/master-plan.xlsx` (sheet Milestones, WBS, Resources, Gantt, Change log), `master-plan.md`, `risk-register.md` (hoặc vị trí mục lục chỉ tới).
 
 ## Vì sao quan trọng
 
@@ -24,16 +24,16 @@ Kế hoạch trả lời: giao gì, khi nào, ai làm, và nếu có chuyện th
 
 ## Các bước kiểm
 
-1. Có đủ 5 sheet chưa? Có trang `master-plan.md` giải thích vì sao chia milestone như vậy chưa?
+1. Có đủ 5 phần Milestones, WBS, Resources, Gantt, Change log chưa? Các phần này có thể nằm ở file hoặc sheet tên khác, miễn mục lục chỉ tới. Có trang giải thích vì sao chia milestone như vậy chưa?
 2. **Từng milestone:** sau milestone này, client tự làm được việc gì trên phần mềm? Nếu câu trả lời là "chưa làm được gì" hoặc "xem tài liệu" thì milestone đó đang chia theo tầng kỹ thuật hoặc chỉ giao tài liệu.
 3. Mỗi milestone có điều kiện nghiệm thu kiểm được, và cách client kiểm tra không?
 4. **Chỉ một bộ mốc:** danh sách và ngày milestone có giống nhau ở proposal, master plan, GitHub và các tài liệu khác không?
 5. **WBS:** mỗi hạng mục có milestone, FR hoặc module, effort, owner, ngày không? Có hạng mục cho tích hợp, test, regression, sửa lỗi không? Tích hợp có bị dồn hết vào milestone cuối không?
-6. **Resources:** tổng giờ nguồn lực có đủ cho tổng effort WBS không? Nguồn lực có phải người thật trong nhóm (hoặc vai trò mô phỏng có ghi rõ) không?
+6. **Resources:** tổng giờ nguồn lực có đủ cho tổng effort WBS không, và có ai bị giao quá sức không? Nguồn lực là người thật trong nhóm hay vai trò mô phỏng có ghi rõ? Nếu chỉ có vai trò, hỏi nhóm ai đảm nhận vai trò nào, không tự tính.
 7. **Gantt:** vẽ từ ngày trong ô hay tô màu tay? Có phụ thuộc giữa các hạng mục không?
-8. **Năng lực dự phòng:** chừa bao nhiêu cho CR và sửa lỗi, nằm ở đâu?
+8. **Năng lực dự phòng:** effort cho test, regression, sửa lỗi đã nằm trong WBS và báo giá chưa (đây là việc đã biết trước)? Phần chừa cho CR và rủi ro (việc chưa biết trước) là bao nhiêu, nằm ở đâu, có bị tính trùng với effort sửa lỗi không?
 9. **Change log:** có dòng phiên bản đầu tiên không? Kế hoạch đã đổi mà Change log không có dòng nào là vấn đề.
-10. **Rủi ro:** có đủ 6 cột không? Có rủi ro phần mềm thật của dự án (tích hợp, dữ liệu, hiệu năng, phụ thuộc bên ngoài, thiếu người) hay chỉ rủi ro chung chung? Owner có phải người thật không? Phương án có làm được không?
+10. **Rủi ro:** có đủ 6 thông tin (mô tả, khả năng, tác động, owner, phương án, trạng thái) không? Có rủi ro phần mềm thật của dự án (tích hợp, dữ liệu, hiệu năng, phụ thuộc bên ngoài, thiếu người) hay chỉ rủi ro chung chung? Owner có phải người thật không? Phương án có làm được không?
 11. Milestone thực hiện đã chọn có hợp lý không: có chạy được và demo được trong thời gian môn học không?
 
 ## Câu hỏi để nhóm tự trả lời

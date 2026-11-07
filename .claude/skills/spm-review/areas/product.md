@@ -1,6 +1,6 @@
 # Review: Product
 
-Đọc: `docs/10-product-management/` (feedback-process, roadmap, success-metrics) hoặc vị trí mục lục chỉ tới.
+Tìm theo mục lục của nhóm. Vị trí trong bộ khung: `docs/10-product-management/` (feedback-process, roadmap, success-metrics) hoặc vị trí mục lục chỉ tới.
 
 ## Vì sao quan trọng
 

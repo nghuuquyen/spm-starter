@@ -1,6 +1,6 @@
 # Review: Team Charter
 
-Đọc: `docs/08-project/team-charter.md` (hoặc vị trí mục lục chỉ tới), đối chiếu `.github/` và lịch sử PR.
+Tìm theo mục lục của nhóm. Vị trí trong bộ khung: `docs/08-project/team-charter.md` (hoặc vị trí mục lục chỉ tới), đối chiếu `.github/` và lịch sử PR.
 
 ## Vì sao quan trọng
 

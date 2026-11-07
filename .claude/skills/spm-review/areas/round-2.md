@@ -22,6 +22,6 @@ Dùng trước vòng feedback 2. Theo chuẩn, vòng 2 tập trung vào **liên 
 
 ## Chọn góp ý
 
-Ưu tiên các chỗ đứt chuỗi và các rule, error flow chưa có AC. Mỗi chỗ đứt, nói rõ sửa ở **nơi gốc** nào. Lỗi lớn của vòng 1 mà vẫn còn thì đặt lên đầu.
+Tối đa 10 mục "Cần bổ sung". Ưu tiên các chỗ đứt chuỗi và các rule, error flow chưa có AC; những chỗ hoàn thiện (độ sâu, format) ghi vào "Để vòng sau". Mỗi chỗ đứt, nói rõ sửa ở **nơi gốc** nào. Lỗi lớn của vòng 1 mà vẫn còn thì đặt lên đầu.
 
 Cuối bản review, gợi ý nhóm: sau khi sửa, chạy lại `/spm-review consistency` cho đúng những tính năng vừa sửa.

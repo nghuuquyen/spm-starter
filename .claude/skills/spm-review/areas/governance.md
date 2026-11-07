@@ -1,6 +1,6 @@
 # Review: Quản trị và giám sát
 
-Đọc: `docs/11-governance/` (reporting, monitoring, change-control, reports/) hoặc vị trí mục lục chỉ tới; đối chiếu GitHub và `master-plan.xlsx`.
+Tìm theo mục lục của nhóm. Vị trí trong bộ khung: `docs/11-governance/` (reporting, monitoring, change-control, reports/) hoặc vị trí mục lục chỉ tới; đối chiếu GitHub và `master-plan.xlsx`.
 
 ## Vì sao quan trọng
 

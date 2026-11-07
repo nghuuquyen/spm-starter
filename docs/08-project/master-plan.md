@@ -4,17 +4,17 @@
 
 ## Cách chia milestone
 
-<!-- Vì sao chia như vậy. Mỗi milestone giao một phần phần mềm chạy được để client tự dùng thử (nên chia theo workflow), không phải chỉ tài liệu hay một tầng kỹ thuật. -->
-
-| Milestone | Phần giao chạy được | Client kiểm tra bằng cách | Điều kiện nghiệm thu |
-| --- | --- | --- | --- |
-| `MS-01` | | | |
+<!-- Vì sao chia và xếp thứ tự milestone như vậy. Mỗi milestone giao một phần phần mềm chạy được để client tự dùng thử (nên chia theo workflow), không phải chỉ tài liệu hay một tầng kỹ thuật. Phần giao, cách client kiểm tra và điều kiện nghiệm thu của từng MS-xx ghi ở sheet Milestones; ở đây chỉ dẫn mã và giải thích lý do. -->
 
 ## Phụ thuộc giữa các milestone
 
-## Năng lực dự phòng cho thay đổi
+## Effort cho test, regression và sửa lỗi
 
-<!-- Chừa bao nhiêu effort cho CR, sửa lỗi, regression test; nằm ở đâu trong plan. -->
+<!-- Đây là việc đã biết trước, nên nằm trong WBS và báo giá như các việc khác. Ghi những dòng WBS và hạng mục Q-xx nào chứa phần này. -->
+
+## Dự phòng cho thay đổi và rủi ro
+
+<!-- Phần chừa cho việc chưa biết trước: CR, rủi ro xảy ra. Bao nhiêu giờ, nằm ở dòng WBS "Dự phòng" nào; có tính vào giá không, hay CR được báo giá riêng. Đừng tính trùng với effort sửa lỗi ở trên. -->
 
 ## Cách nhận feedback của client sau mỗi milestone
 

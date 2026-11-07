@@ -4,23 +4,29 @@ Bộ khung này theo đúng mục "Format repo" của tài liệu *Software Proj
 
 ## Cách dùng
 
-1. Chép `docs/`, `.github/`, `.claude/`, `src/` và `README.md` vào repo của nhóm. Nhóm đã có tài liệu thì chuyển dần nội dung sang đúng chỗ.
-2. Mỗi file có dòng hướng dẫn nằm trong `<!-- … -->`. Dòng này không hiện trên GitHub, có thể giữ lại hoặc xoá.
-3. Điền nội dung thật vào chỗ trống. Phần không áp dụng ghi `N/A` kèm lý do, không để file rỗng.
-4. Đổi tên hoặc gộp file thì được, nhưng phải sửa `docs/README.md` để chỉ đúng vị trí. **Nội dung không có trong mục lục và không tìm được thì không được tính.**
-5. Mỗi thông tin chỉ có một nơi gốc. Nơi khác dẫn lại bằng mã (`FR-…`, `Q-…`, `MS-…`), không chép lại nội dung.
-6. Client, feedback, báo cáo và change request được mô phỏng, nhưng phải ghi rõ `Mô phỏng`.
-7. File này chỉ để hướng dẫn, xoá đi khi không cần nữa.
+1. Dùng bản bộ khung giảng viên phát (đã có sẵn 3 file Word/Excel và `.claude/spm-standard.md`). Chép `docs/`, `.github/`, `.claude/`, `src/`, `README.md`, `HUONG-DAN.md`, `CLAUDE.md`, `AGENTS.md` vào repo của nhóm. Nhóm đã có tài liệu thì chuyển dần nội dung sang đúng chỗ.
+2. Tạo nhãn trên GitHub (tab Issues → Labels) để mẫu issue tự gắn nhãn và để đếm được số liệu: `task`, `bug`, `feedback`, `change-request`, và nhãn mức độ lỗi theo bảng trong `quality-plan.md` (ví dụ `sev:cao`). Owner của task ghi bằng Assignee; hạn dùng ngày của Milestone hoặc trường ngày trong GitHub Projects.
+3. Đề bài của môn, nếu có bản chữ, để trong `docs/01-product/` và thêm vào mục lục, để skill đối chiếu được bài toán.
+4. Mỗi file có dòng hướng dẫn nằm trong `<!-- … -->`. Dòng này không hiện trên GitHub, có thể giữ lại hoặc xoá.
+5. Điền nội dung thật vào chỗ trống. Phần không áp dụng ghi `N/A` kèm lý do, không để file rỗng.
+6. Đổi tên hoặc gộp file thì được, nhưng phải sửa `docs/README.md` để chỉ đúng vị trí. **Nội dung không có trong mục lục và không tìm được thì không được tính.**
+7. Mỗi thông tin chỉ có một nơi gốc. Nơi khác dẫn lại bằng mã (`FR-…`, `Q-…`, `MS-…`), không chép lại nội dung. Liên kết chỉ ghi ở một phía, theo cột "Liên kết phải ghi" trong bảng quy ước mã của `docs/README.md`.
+8. Client, feedback, báo cáo và change request được mô phỏng, nhưng phải ghi rõ `Mô phỏng`.
+9. File này chỉ để hướng dẫn, xoá đi khi không cần nữa. Một số quy ước trong bộ khung (cách đặt mã FR, mã giả định `A-xx`, mã cục bộ `BR-01`/`E-01`, tên file báo cáo) là gợi ý để làm cho tiện, không phải yêu cầu của chuẩn.
 
 ## Dùng AI với bộ skill
 
-Thư mục `.claude/skills/` có 2 skill để dùng với công cụ AI trong lúc làm bài. Với Claude Code, gõ `/tên-skill`. Với công cụ khác, mở file `SKILL.md` của skill (và file hạng mục trong `spm-review/areas/` nếu cần) rồi dán vào làm chỉ dẫn. Các skill đọc tài liệu chuẩn của môn ở `.claude/spm-standard.md`.
+Thư mục `.claude/skills/` có 2 skill để dùng với công cụ AI trong lúc làm bài. Các skill đọc tài liệu chuẩn của môn ở `.claude/spm-standard.md`; thiếu file này thì skill sẽ dừng. `CLAUDE.md` và `AGENTS.md` ở gốc repo ghi các nguyên tắc dùng AI cho cả khi không gọi skill.
 
-**`spm-review`: tự review tài liệu.** Viết xong một phần thì review phần đó; trước mỗi vòng feedback thì review tổng thể.
+- **Claude Code:** gõ `/tên-skill`, ví dụ `/spm-review prd`.
+- **Công cụ AI khác đọc được file trong repo** (Cursor, Copilot, Codex…): yêu cầu AI đọc `.claude/skills/<skill>/SKILL.md` và làm theo.
+- **Chat trên web không đọc được repo:** dán `SKILL.md`, file hạng mục cần dùng trong `spm-review/areas/`, `.claude/spm-standard.md` và nội dung tài liệu cần review. Khi đó bằng chứng ghi theo tên mục hoặc đoạn trích thay vì `file:dòng`. Review toàn repo theo cách này rất dài; nên review từng hạng mục.
+
+**`spm-review`: tự review tài liệu.** Viết xong một phần thì review đúng hạng mục đó; trước vòng feedback N thì chạy `rN`; lần đầu hoặc khi muốn nhìn toàn cảnh thì chạy `overview`.
 
 | Lệnh | Review |
 | --- | --- |
-| `/spm-review index` | Mục lục `docs/README.md` và cấu trúc repo |
+| `/spm-review index` | Mục lục và cấu trúc repo |
 | `/spm-review proposal` | Proposal và báo giá |
 | `/spm-review prd` | PRD: sản phẩm, module, FR, NFR, AC, test. Thêm mã module để review một module, ví dụ `/spm-review prd M02` |
 | `/spm-review plan` | Master Plan và sổ rủi ro |
@@ -35,9 +41,9 @@ Thư mục `.claude/skills/` có 2 skill để dùng với công cụ AI trong l
 | `/spm-review r2` | Trước vòng feedback 2: liên kết (chuỗi báo giá → PRD → plan → task → test; mỗi rule và error flow có AC) |
 | `/spm-review r3` | Trước vòng feedback 3 và trước khi chốt: hoàn thiện (issue cũ đã xử lý thật chưa, độ sâu nội dung, format, vấn đáp thử) |
 
-Mỗi hạng mục có hướng dẫn riêng trong `.claude/skills/spm-review/areas/`: vì sao phần đó quan trọng, chuẩn yêu cầu gì, thế nào là chung chung và thế nào là dùng được ngay, câu hỏi để nhóm tự trả lời, lỗi hay gặp. Nên đọc file đó trước khi viết phần tương ứng.
+Mỗi hạng mục có hướng dẫn riêng trong `.claude/skills/spm-review/areas/`: vì sao phần đó quan trọng, chuẩn yêu cầu gì, thế nào là chung chung và thế nào là dùng được ngay, câu hỏi để nhóm tự trả lời, chỗ hay bị sót. Nên đọc file đó **trước khi viết** phần tương ứng, không chỉ lúc review.
 
-Kết quả review gồm: phần nhóm đã làm tốt; phần **cần bổ sung** theo chuẩn (cùng mẫu với issue feedback của giảng viên: nhãn `ẩn` / `mâu thuẫn` / `thiếu`, bằng chứng, hiện trạng, vì sao quan trọng, tác động, câu hỏi cho nhóm, hoàn thành khi); và vài **gợi ý thêm** không bắt buộc. Skill tôn trọng cách làm riêng của nhóm: đặt file khác chỗ, chia milestone khác, miễn đáp ứng chuẩn và mục lục chỉ đúng. Đang sửa theo một issue feedback thì đưa issue đó cho skill để kiểm lại điều kiện "Hoàn thành khi".
+Trước khi review, skill hỏi nhóm một câu: phần này nhóm thấy chắc ở đâu, còn băn khoăn ở đâu. Kết quả review gồm: phần nhóm đã làm tốt; phần **cần bổ sung** theo chuẩn (cùng mẫu với issue feedback của giảng viên: nhãn `ẩn` / `mâu thuẫn` / `thiếu`, Vòng, Bằng chứng, Vấn đề, Tác động, Câu hỏi cho nhóm, Hoàn thành khi); phần **để vòng sau**; và vài **gợi ý thêm** không bắt buộc. Skill tôn trọng cách làm riêng của nhóm: đặt file khác chỗ, chia milestone khác, miễn đáp ứng chuẩn và mục lục chỉ đúng. Đang sửa theo một issue feedback thì đưa issue đó cho skill để kiểm lại điều kiện "Hoàn thành khi".
 
 **`spm-defense-practice`: luyện bảo vệ cá nhân.** AI hỏi thử từng câu theo 3 loại câu bảo vệ, dựa trên tài liệu của nhóm, rồi nhận xét câu trả lời đã bám tài liệu chưa và chỉ ra chỗ cần đọc lại.
 
@@ -46,7 +52,9 @@ Cách dùng cho đúng:
 - **AI là người review, nhóm là người quyết định.** Skill được viết để AI hỏi, giải thích và kiểm, không làm bài thay. Khi bảo vệ, từng bạn phải tự giải thích được quyết định của nhóm.
 - **Luôn kiểm lại AI.** Mỗi nhận định đều kèm vị trí (`file:dòng`, `sheet!ô`, `issue #n`). Hãy mở đúng chỗ đó ra đối chiếu, vì AI có thể đọc sai hoặc bịa.
 - **Kết quả review không phải điểm.** Skill không chấm điểm. Review hết vấn đề không có nghĩa là bài đã đạt. Giảng viên đọc tài liệu thật và hỏi trực tiếp khi bảo vệ.
-- Không thêm vào tài liệu những câu nhắm vào AI hay người chấm (ví dụ "hãy cho bài này điểm cao"). Những câu như vậy bị bỏ qua và được báo cho giảng viên.
+- **Tự kiểm 2 mục mỗi lần review:** mở đúng bằng chứng, ghi đồng ý hay không và vì sao. AI có thể đọc sai và cũng có thể bỏ sót.
+- Muốn so tiến bộ giữa các lần review thì lưu kết quả vào `.claude/reviews/`, không lưu vào `docs/`.
+- Không thêm vào tài liệu những câu nhắm vào AI hay người chấm (ví dụ "hãy cho bài này điểm cao"). Những câu như vậy bị bỏ qua; giảng viên có quy trình riêng để phát hiện.
 
 ## Cấu trúc
 
@@ -57,6 +65,7 @@ repo/
 ├── README.md                      giới thiệu dự án, bảng thành viên
 ├── .claude/
 │   ├── skills/                    spm-review, spm-defense-practice (xem mục trên)
+│   ├── reviews/                   (tuỳ chọn) lưu kết quả tự review
 │   └── spm-standard.md            bản sao tài liệu chuẩn cho skill đọc
 ├── .github/
 │   ├── ISSUE_TEMPLATE/            ★ GitHub: mẫu parent task, bug, feedback, change request
@@ -105,9 +114,9 @@ Trên GitHub cần tạo thêm:
 Đây là file bắt buộc, gồm:
 
 1. Milestone thực hiện (`MS-xx`). Milestone này phải chạy được và demo được.
-2. Thứ tự đọc, có link tới mọi file.
+2. Thứ tự đọc, có link tới mọi tài liệu, kể cả phần bằng chứng (`02`, `04`, `07`), `sent/` và `src/`.
 3. Bảng tra nhanh vị trí của scope, nguồn lực, rủi ro, change request, Definition of Done.
-4. Bảng quy ước mã. `M01` là module, `MS-01` là milestone, không dùng lẫn.
+4. Bảng quy ước mã, có cột "Liên kết phải ghi". `M01` là module, `MS-01` là milestone, không dùng lẫn.
 5. Bảng ghi phần nào là `Mô phỏng`.
 6. Người chịu trách nhiệm chính của từng file Word/Excel.
 
@@ -118,9 +127,9 @@ Trên GitHub cần tạo thêm:
 | `01-product/README.md` | Vấn đề, bảng actor, goals, non-goals. Phạm vi các FR phải khớp với goals và non-goals |
 | `03-modules/README.md` | Danh sách module: mã `M01`, tên, nhóm mã FR, thư mục |
 | `03-modules/M01-ten-module/README.md` | Mục đích, actor, phụ thuộc của module. Đổi tên thư mục cho đúng module, mỗi module một thư mục |
-| `03-modules/M01-ten-module/prd.md` | Các FR của module. **Mỗi FR đủ 10 mục:** Mô tả, Actor, Priority, Preconditions, Luồng chính, Business Rules, Alternative và Error Flows, Acceptance Criteria, Edge Case. Mỗi business rule và mỗi error flow có ít nhất một AC. Mã viết dạng `FR-XXX-01` và `FR-XXX-01/AC-01`, trong đó XXX là viết tắt module bằng 2–8 chữ in hoa |
+| `03-modules/M01-ten-module/prd.md` | Các FR của module. **Mỗi FR đủ 9 mục của mẫu FR:** Mô tả, Actor, Priority, Preconditions, Luồng chính, Business Rules, Alternative và Error Flows, Acceptance Criteria, ví dụ Edge Case. Mỗi business rule và mỗi error flow có ít nhất một AC. Mã viết dạng `FR-XXX-01` và `FR-XXX-01/AC-01` (bộ khung gợi ý XXX là viết tắt module bằng chữ in hoa); trong một FR có thể đánh mã cục bộ `BR-01`, `E-01` để cột "Kiểm cho" của AC ghi rõ |
 | `05-non-functional-requirements/README.md` | NFR `NFR-PERF-01`, có ngưỡng và cách đo. "Hệ thống nhanh" là không đo được |
-| `06-acceptance/test-scenarios.md` | Kịch bản `TS-01`. Mỗi kịch bản ghi mã AC hoặc NFR mà nó kiểm |
+| `06-acceptance/test-scenarios.md` | Kịch bản `TS-01`. Mỗi kịch bản ghi mã AC hoặc NFR mà nó kiểm; cột Regression đánh dấu kịch bản chạy lại trước mỗi lần bàn giao |
 | `06-acceptance/traceability-matrix.md` | Bảng tổng hợp theo từng AC: AC → Test → Parent task → Milestone → Báo giá. Bảng này không phải nơi gốc: sửa ở nơi gốc trước rồi mới cập nhật bảng |
 
 ## Chỉ dùng làm bằng chứng
@@ -132,12 +141,12 @@ Trên GitHub cần tạo thêm:
 | File | Điền gì |
 | --- | --- |
 | `proposal.docx` | Tài liệu gửi khách: lịch sử phiên bản, bài toán, giải pháp, phạm vi làm và không làm, giả định, timeline tổng, giá, điều kiện nghiệm thu |
-| `quotation.xlsx` | Sheet **Báo giá**: hạng mục `Q-xx` gắn module/FR, phạm vi, loại effort (gồm cả tích hợp, test, triển khai, sửa lỗi), vai trò, effort. Đơn giá, Thành tiền và Tổng là công thức, không gõ tay. Sheet **Đơn giá**: đơn giá theo vai trò, kèm căn cứ. Sheet **Giả định**: các giả định ảnh hưởng giá |
-| `master-plan.xlsx` | Sheet **Milestones**: phần giao chạy được, cách client kiểm tra, điều kiện nghiệm thu. Sheet **WBS**: hạng mục, MS, FR, `Q-xx`, effort, owner, ngày. Sheet **Resources**: giờ của từng người, so với tổng effort WBS. Sheet **Gantt**: tự vẽ từ ngày trong WBS, chỉ nhập ngày bắt đầu tuần đầu ở ô E3, không tô màu tay. Sheet **Change log**: mỗi CR được duyệt ghi một dòng, không ghi đè |
-| `master-plan.md` | Vì sao chia milestone như vậy, phụ thuộc giữa các milestone, năng lực dự phòng cho CR và sửa lỗi, cách nhận feedback sau mỗi milestone |
+| `quotation.xlsx` | Sheet **Báo giá**: hạng mục `Q-xx` gắn module/FR, phạm vi, loại effort, vai trò, effort. Một `Q-xx` có thể nhiều dòng, mỗi loại effort một dòng (phát triển, tích hợp, test, triển khai, sửa lỗi…), dòng nào cũng ghi lại mã. Đơn giá tự tra theo vai trò; Thành tiền và Tổng là công thức. Ô kiểm tra ở cuối phải bằng 0 (không có dòng nào thiếu đơn giá). Sheet **Tổng theo Q**: tổng effort và tiền của từng `Q-xx`. Sheet **Đơn giá**: đơn giá bán theo vai trò, kèm căn cứ. Sheet **Giả định**: mã `A-xx` và ảnh hưởng đến giá. Sheet **Phiên bản**: mỗi lần báo giá đổi ghi một dòng |
+| `master-plan.xlsx` | Sheet **Milestones**: phần giao chạy được, cách client kiểm tra, điều kiện nghiệm thu, ngày đã chốt; cột Kiểm tra báo khi việc trong WBS kết thúc trễ hơn mốc. Sheet **WBS**: hạng mục, MS, `Q-xx`, effort, owner, ngày (FR lần qua `Q-xx`); gồm cả test, regression, sửa lỗi; dự phòng là dòng riêng bắt đầu bằng "Dự phòng". Sheet **Resources**: giờ của từng người, effort được giao, dư hay thiếu. Sheet **Gantt**: tự vẽ từ ngày trong WBS, chỉ nhập ngày bắt đầu tuần đầu ở ô E3, không tô màu tay. Sheet **Change log**: mỗi CR được duyệt ghi một dòng với giá trị cũ và mới, không ghi đè |
+| `master-plan.md` | Vì sao chia milestone như vậy, phụ thuộc giữa các milestone, effort cho test và sửa lỗi nằm ở đâu, dự phòng cho CR và rủi ro, cách nhận feedback sau mỗi milestone |
 | `risk-register.md` | Rủi ro `R-01`: mô tả, khả năng, tác động, owner, phương án, trạng thái. Ưu tiên rủi ro phần mềm thật của dự án |
 | `team-charter.md` | Vai trò gắn với người thật, người dự phòng, cách ra quyết định, lịch phối hợp, xử lý xung đột, khi thiếu người, quy tắc branch, PR, review, merge |
-| `assumptions.md`, `constraints.md`, `open-questions.md` | Giả định, ràng buộc, câu hỏi mở. Mỗi dòng ghi ảnh hưởng tới giá hoặc plan |
+| `assumptions.md`, `constraints.md`, `open-questions.md` | Giả định (mã `A-xx`, nơi gốc của giả định), ràng buộc, câu hỏi mở. Mỗi dòng ghi ảnh hưởng tới giá hoặc plan |
 | `sent/` | Bản PDF của Proposal mỗi lần gửi khách, tên có phiên bản và ngày (ví dụ `proposal-v1.0-2026-11-10.pdf`). Ghi thêm một dòng vào `sent/README.md` |
 
 Khuyến nghị, không tính điểm riêng: biên bản nghiệm thu `acceptance-report.docx` và retrospective `closure.md`, đặt trong `08-project/`.
@@ -176,3 +185,18 @@ Giảng viên sẽ chọn 3 tính năng và lần theo chuỗi sau để đánh 
 quotation.xlsx  Q-03  ──►  prd.md  FR-STU-02/AC-04  ──►  master-plan.xlsx  MS-02
       ──►  GitHub parent task #12  ──►  test-scenarios.md  TS-05  ──►  test-results/, reports/
 ```
+
+## Thuật ngữ
+
+| Thuật ngữ | Nghĩa |
+| --- | --- |
+| Effort | Số giờ công cần để làm một việc |
+| WBS | Bảng chia nhỏ toàn bộ công việc của dự án |
+| Milestone | Mốc giao một phần sản phẩm; mã `MS-xx` |
+| AC (Acceptance Criteria) | Tiêu chí nghiệm thu: điều kiện cụ thể để biết một yêu cầu đã đạt |
+| NFR | Yêu cầu phi chức năng: hiệu năng, bảo mật, sẵn sàng…, phải đo được |
+| DoD (Definition of Done) | Danh sách điều kiện để một việc được coi là xong |
+| Regression test | Chạy lại test các phần đã có để chắc phần mới không làm hỏng chúng |
+| CR (Change Request) | Yêu cầu thay đổi phạm vi, giá hoặc kế hoạch, đi qua quy trình duyệt |
+| Escalate | Báo lên người có thẩm quyền khi chỉ số vượt ngưỡng |
+| Baseline | Kế hoạch đã chốt, dùng để so với thực tế |

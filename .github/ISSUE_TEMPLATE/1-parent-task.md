@@ -7,8 +7,8 @@ labels: task
 
 **FR:** FR-XXX-01, …
 **Milestone:** MS-xx
-**Owner:**
-**Hạn:**
+**Owner:** <!-- gán người này làm Assignee của issue -->
+**Hạn:** <!-- nên trùng ngày của milestone, hoặc đặt ở trường ngày của GitHub Projects -->
 
 ## Mô tả
 

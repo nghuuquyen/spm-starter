@@ -9,7 +9,7 @@ Một dự án nhất quán là khi giá, effort, kế hoạch, task và test c�
 ## Chuẩn yêu cầu
 
 - Chuỗi: Proposal và báo giá → PRD → Master Plan → parent task → test → báo cáo. Tính năng chưa thực hiện chỉ cần lần đến kịch bản test.
-- Mỗi yêu cầu, việc, thay đổi có mã riêng. Liên kết chỉ khai báo ở một phía.
+- Mỗi yêu cầu, việc, thay đổi có mã riêng. Liên kết chỉ khai báo ở một phía; phía nào ghi liên kết nào xem cột "Liên kết phải ghi" trong bảng quy ước mã của chuẩn.
 - `traceability-matrix.md` tổng hợp theo từng AC (AC → Test → Parent task → Milestone → Báo giá), không phải nơi gốc để sửa.
 
 ## Mục tiêu chất lượng
@@ -24,7 +24,7 @@ Với mỗi tính năng, đi từng mắt xích và ghi **có / thiếu / mâu t
 
 1. **Báo giá:** hạng mục `Q-xx` nào chứa FR hoặc module này? Effort bao nhiêu, có phần tích hợp, test không?
 2. **PRD:** FR ở file nào, có những AC nào?
-3. **Master Plan:** thuộc `MS-xx` nào, dòng WBS nào? Effort và ngày có khớp báo giá không?
+3. **Master Plan:** thuộc `MS-xx` nào, những dòng WBS nào (WBS dẫn tới `Q-xx`, nên lần từ `Q-xx` của bước 1)? Tổng effort các dòng đó có khớp effort của `Q-xx` không? Ngày có nằm trong mốc không?
 4. **GitHub:** parent task `#n` nào ghi mã FR này, cùng `MS-xx`, có owner, hạn, điều kiện hoàn thành? Nội dung task có khớp PRD không?
 5. **Test:** `TS-xx` nào ghi mã các AC này? AC nào chưa có test?
 6. **Kết quả và báo cáo** (chỉ tính năng thuộc milestone thực hiện): có kết quả test chạy thật, có trong báo cáo không?

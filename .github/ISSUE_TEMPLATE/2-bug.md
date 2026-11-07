@@ -7,6 +7,7 @@ labels: bug
 
 **Mức độ:** <!-- theo bảng mức độ lỗi trong 09-quality/quality-plan.md -->
 **Liên quan:** FR-XXX-01/AC-01, TS-xx, MS-xx
+**Phiên bản / commit, môi trường:**
 
 ## Các bước tái hiện
 
@@ -15,3 +16,7 @@ labels: bug
 ## Kết quả mong đợi
 
 ## Kết quả thực tế
+
+## Xử lý
+
+<!-- Sửa ở PR nào; TS nào đã chạy lại để kiểm. -->

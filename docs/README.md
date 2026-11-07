@@ -21,6 +21,7 @@ Milestone thực hiện: `MS-xx` (<tên milestone>). Link GitHub milestone: <lin
 5. Cách làm việc: [Team Charter](08-project/team-charter.md), [Quality](09-quality/quality-plan.md)
 6. Product: [Quy trình feedback](10-product-management/feedback-process.md), [Roadmap](10-product-management/roadmap.md), [Chỉ số giá trị](10-product-management/success-metrics.md)
 7. Quản trị: [Báo cáo](11-governance/reporting.md), [Giám sát](11-governance/monitoring.md), [Change request](11-governance/change-control.md), [Báo cáo đã lập](11-governance/reports/)
+8. Tài liệu hỗ trợ (bằng chứng): [Domain](02-domain/README.md), [Workflows](04-workflows/README.md), [Kiến trúc](07-architecture/README.md), [Bản proposal đã gửi](08-project/sent/), [Mã nguồn](../src/)
 
 ## Tra nhanh vị trí
 
@@ -37,19 +38,23 @@ Milestone thực hiện: `MS-xx` (<tên milestone>). Link GitHub milestone: <lin
 
 ## Quy ước mã
 
-| Đối tượng | Dạng | Nơi gốc |
-| --- | --- | --- |
-| Module | `M01` | `03-modules/` |
-| Yêu cầu chức năng | `FR-XXX-01` (XXX = viết tắt module, 2–8 chữ in hoa) | prd.md của module |
-| Tiêu chí nghiệm thu | `FR-XXX-01/AC-01` | prd.md của module |
-| Yêu cầu phi chức năng | `NFR-PERF-01` | `05-non-functional-requirements/` |
-| Kịch bản test | `TS-01` | `06-acceptance/test-scenarios.md` |
-| Hạng mục báo giá | `Q-01` | `08-project/quotation.xlsx` |
-| Milestone | `MS-01` | `08-project/master-plan.xlsx`, GitHub Milestones |
-| Rủi ro | `R-01` | `08-project/risk-register.md` |
-| Change request | `CR-01` | GitHub Issue |
+Liên kết chỉ ghi ở **một phía**: phía ghi là cột "Liên kết phải ghi". Ví dụ kịch bản test ghi mã AC mà nó kiểm; PRD không ghi ngược lại mã test.
 
-`M01` là module, `MS-01` là milestone; không dùng lẫn.
+| Đối tượng | Dạng | Nơi gốc | Liên kết phải ghi |
+| --- | --- | --- | --- |
+| Module | `M01` | `03-modules/` | |
+| Yêu cầu chức năng | `FR-XXX-01` | prd.md của module | |
+| Tiêu chí nghiệm thu | `FR-XXX-01/AC-01` | prd.md của module | |
+| Yêu cầu phi chức năng | `NFR-PERF-01` | `05-non-functional-requirements/` | |
+| Kịch bản test | `TS-01` | `06-acceptance/test-scenarios.md` | Mã AC hoặc NFR được test |
+| Hạng mục báo giá | `Q-01` | `08-project/quotation.xlsx` | Module hoặc FR thuộc hạng mục |
+| Milestone | `MS-01` | `08-project/master-plan.xlsx`, GitHub Milestones | Phần giao được, điều kiện nghiệm thu |
+| Parent task | `#12` | GitHub Issue | Mã FR, `MS-xx`, owner, hạn, điều kiện hoàn thành |
+| Rủi ro | `R-01` | `08-project/risk-register.md` | Owner, phương án xử lý |
+| Change request | `CR-01` | GitHub Issue | Tài liệu và task đã cập nhật |
+| Giả định | `A-01` | `08-project/assumptions.md` | |
+
+`M01` là module, `MS-01` là milestone; không dùng lẫn. Cách đặt phần XXX của mã FR (ví dụ viết tắt module bằng chữ in hoa) và mã giả định `A-01` là gợi ý của bộ khung, nhóm có thể đặt khác nếu nhất quán.
 
 ## Dữ liệu mô phỏng
 
@@ -60,6 +65,7 @@ Milestone thực hiện: `MS-xx` (<tên milestone>). Link GitHub milestone: <lin
 | Client | | |
 | Feedback | | |
 | Change request | | |
+| Báo cáo | | |
 
 ## Người chịu trách nhiệm file Word/Excel
 

@@ -11,7 +11,7 @@ Dùng trước vòng feedback 3 và trước khi chốt bài. Theo chuẩn, vòn
 
 ## Các bước
 
-1. **Issue feedback cũ:** liệt kê các issue feedback của vòng 1 và 2 (dùng `gh issue list` nếu đọc được GitHub, hoặc nhờ nhóm dán). Với từng issue:
+1. **Issue feedback cũ:** liệt kê các issue feedback của vòng 1 và 2, gồm cả issue đã đóng (dùng `gh issue list --state all` như trong `SKILL.md`, hoặc nhờ nhóm dán). Với từng issue:
    - đã có PR hoặc commit sửa chưa;
    - điều kiện "Hoàn thành khi" đã đạt chưa, mở đúng chỗ để kiểm;
    - nếu nhóm đóng issue vì không đồng ý, lý do có rõ ràng không.
@@ -34,6 +34,6 @@ Dùng trước vòng feedback 3 và trước khi chốt bài. Theo chuẩn, vòn
 
 ## Chọn góp ý
 
-Vòng này nhóm đã làm nhiều. Ghi nhận rõ những gì đã tiến bộ so với các vòng trước. "Cần bổ sung" chỉ gồm issue cũ chưa xử lý xong, phần còn thiếu của milestone thực hiện, và mâu thuẫn còn sót. Những chỗ làm sâu thêm được thì đưa vào "Gợi ý thêm".
+Vòng này nhóm đã làm nhiều. Ghi nhận rõ những gì đã tiến bộ so với các vòng trước. "Cần bổ sung" (tối đa 10) chỉ gồm issue cũ chưa xử lý xong, phần chuẩn yêu cầu còn thiếu (gồm của milestone thực hiện), và mâu thuẫn còn sót. Những chỗ đã đủ nhưng còn làm sâu thêm được thì đưa vào "Có thể làm sâu thêm". Không xếp mức hay đánh giá đạt.
 
 Nhắc nhóm: mọi thay đổi sau thời điểm chốt không được tính, nên hoàn tất và merge trước hạn.

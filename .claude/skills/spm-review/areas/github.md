@@ -1,6 +1,6 @@
 # Review: GitHub
 
-Đọc: GitHub Milestones, Issues, Pull requests, Releases của repo; `.github/ISSUE_TEMPLATE/`, `.github/pull_request_template.md`. Dùng `gh` chỉ để đọc. Không có quyền thì nhờ nhóm dán danh sách milestone và vài parent task.
+Đọc: GitHub Milestones, Issues, Pull requests, Releases của repo; `.github/ISSUE_TEMPLATE/`, `.github/pull_request_template.md`. Dùng `gh` chỉ để đọc, lấy cả mục đã đóng (xem lệnh trong `SKILL.md`). Không có quyền thì nhờ nhóm dán danh sách milestone và vài parent task.
 
 ## Vì sao quan trọng
 
@@ -31,7 +31,7 @@ Tài liệu nói kế hoạch, GitHub cho thấy thực tế. Parent task rõ r�
    - code vào qua PR có review;
    - issue đóng có bằng chứng (PR, commit, checklist đã tích);
    - có release note.
-7. Issue đã đóng: đóng vì xong thật hay vì không làm? Checklist trong issue có được tích khi đóng không?
+7. Issue đã đóng có dẫn tới bằng chứng đã xong không (PR, commit, kết quả test), và đạt điều kiện hoàn thành ghi trong issue chưa? Issue đóng vì không làm nữa thì có ghi lý do không?
 8. Trạng thái trên GitHub có khớp với báo cáo tiến độ không?
 
 ## Câu hỏi để nhóm tự trả lời
