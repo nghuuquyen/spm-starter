@@ -1,0 +1,70 @@
+# Mục lục tài liệu
+
+<!-- Hướng dẫn
+- File này là mục lục BẮT BUỘC. Nội dung không có trong mục lục và không tìm được thì không được tính.
+- Đổi tên hoặc gộp file thì sửa đường dẫn ở bảng dưới cho đúng. Phần không áp dụng ghi `N/A` kèm lý do, không để file rỗng.
+- Mỗi thông tin chỉ có một nơi gốc; nơi khác dẫn lại mã (FR-…, Q-…, MS-…), không chép lại nội dung.
+-->
+
+## Milestone thực hiện
+
+<!-- Hướng dẫn: thay MS-xx bằng mã thật, ví dụ MS-02. Milestone này phải chạy được và demo được. -->
+
+Milestone thực hiện: `MS-xx` (<tên milestone>). Link GitHub milestone: <link>
+
+## Thứ tự đọc
+
+1. Bài toán và phạm vi: [Proposal](08-project/proposal.docx), [Tổng quan sản phẩm](01-product/README.md)
+2. Yêu cầu: [Danh sách module](03-modules/README.md) → PRD từng module ([M01](03-modules/M01-ten-module/prd.md), …) → [NFR](05-non-functional-requirements/README.md)
+3. Nghiệm thu: [Kịch bản test](06-acceptance/test-scenarios.md), [Ma trận truy vết](06-acceptance/traceability-matrix.md)
+4. Giá và kế hoạch: [Báo giá](08-project/quotation.xlsx), [Master Plan](08-project/master-plan.md) + [master-plan.xlsx](08-project/master-plan.xlsx), [Rủi ro](08-project/risk-register.md)
+5. Cách làm việc: [Team Charter](08-project/team-charter.md), [Quality](09-quality/quality-plan.md)
+6. Product: [Quy trình feedback](10-product-management/feedback-process.md), [Roadmap](10-product-management/roadmap.md), [Chỉ số giá trị](10-product-management/success-metrics.md)
+7. Quản trị: [Báo cáo](11-governance/reporting.md), [Giám sát](11-governance/monitoring.md), [Change request](11-governance/change-control.md), [Báo cáo đã lập](11-governance/reports/)
+
+## Tra nhanh vị trí
+
+| Nội dung | Ở đâu |
+| --- | --- |
+| Scope (làm và không làm) | `08-project/proposal.docx` mục …; `01-product/README.md` mục Goals / Non-goals |
+| Nguồn lực | `08-project/master-plan.xlsx` sheet Resources |
+| Rủi ro | [risk-register.md](08-project/risk-register.md) |
+| Change request | Quy trình: [change-control.md](11-governance/change-control.md); CR thực tế: GitHub Issues nhãn `change-request` |
+| Definition of Done | [quality-plan.md](09-quality/quality-plan.md) mục Definition of Done |
+| Giả định, ràng buộc, câu hỏi mở | [assumptions.md](08-project/assumptions.md), [constraints.md](08-project/constraints.md), [open-questions.md](08-project/open-questions.md) |
+| Kết quả test milestone thực hiện | [09-quality/test-results/](09-quality/test-results/) |
+| Báo cáo | [11-governance/reports/](11-governance/reports/) |
+
+## Quy ước mã
+
+| Đối tượng | Dạng | Nơi gốc |
+| --- | --- | --- |
+| Module | `M01` | `03-modules/` |
+| Yêu cầu chức năng | `FR-XXX-01` (XXX = viết tắt module, 2–8 chữ in hoa) | prd.md của module |
+| Tiêu chí nghiệm thu | `FR-XXX-01/AC-01` | prd.md của module |
+| Yêu cầu phi chức năng | `NFR-PERF-01` | `05-non-functional-requirements/` |
+| Kịch bản test | `TS-01` | `06-acceptance/test-scenarios.md` |
+| Hạng mục báo giá | `Q-01` | `08-project/quotation.xlsx` |
+| Milestone | `MS-01` | `08-project/master-plan.xlsx`, GitHub Milestones |
+| Rủi ro | `R-01` | `08-project/risk-register.md` |
+| Change request | `CR-01` | GitHub Issue |
+
+`M01` là module, `MS-01` là milestone; không dùng lẫn.
+
+## Dữ liệu mô phỏng
+
+<!-- Hướng dẫn: client, feedback, báo cáo, CR được phép mô phỏng nhưng phải ghi rõ chữ `Mô phỏng` ngay tại chỗ dùng. Liệt kê ở đây những phần là mô phỏng. -->
+
+| Phần | Mô phỏng? | Ghi chú |
+| --- | --- | --- |
+| Client | | |
+| Feedback | | |
+| Change request | | |
+
+## Người chịu trách nhiệm file Word/Excel
+
+| File | Người chịu trách nhiệm chính |
+| --- | --- |
+| `08-project/proposal.docx` | |
+| `08-project/quotation.xlsx` | |
+| `08-project/master-plan.xlsx` | |
