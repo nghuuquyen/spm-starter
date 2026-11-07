@@ -2,9 +2,11 @@
 
 Bộ khung này theo đúng mục "Format repo" của tài liệu *Software Project Management: Format nộp bài và tiêu chí chấm*. Khi có điểm khác nhau, tài liệu đó và đề bài chung của môn là căn cứ.
 
+Nhóm làm **tài liệu, kế hoạch và quy trình** cho toàn dự án: proposal, báo giá, PRD, master plan, rủi ro, Team Charter, quy trình quản lý chất lượng, quy trình quản lý sản phẩm, quy trình quản trị. Không yêu cầu làm phần mềm chạy thật, không cần code, kết quả test, demo hay release.
+
 ## Cách dùng
 
-1. Dùng bản bộ khung giảng viên phát (đã có sẵn 3 file Word/Excel và `.claude/spm-standard.md`). Chép `docs/`, `.github/`, `.claude/`, `src/`, `README.md`, `HUONG-DAN.md`, `CLAUDE.md`, `AGENTS.md` vào repo của nhóm. Nhóm đã có tài liệu thì chuyển dần nội dung sang đúng chỗ.
+1. Dùng bản bộ khung giảng viên phát (đã có sẵn 3 file Word/Excel và `.claude/spm-standard.md`). Chép `docs/`, `.github/`, `.claude/`, `README.md`, `HUONG-DAN.md`, `CLAUDE.md`, `AGENTS.md` vào repo của nhóm. Nhóm đã có tài liệu thì chuyển dần nội dung sang đúng chỗ.
 2. Tạo nhãn trên GitHub (tab Issues → Labels) để mẫu issue tự gắn nhãn và để đếm được số liệu: `task`, `bug`, `feedback`, `change-request`, và nhãn mức độ lỗi theo bảng trong `quality-plan.md` (ví dụ `sev:cao`). Owner của task ghi bằng Assignee; hạn dùng ngày của Milestone hoặc trường ngày trong GitHub Projects.
 3. Đề bài của môn, nếu có bản chữ, để trong `docs/01-product/` và thêm vào mục lục, để skill đối chiếu được bài toán.
 4. Mỗi file có dòng hướng dẫn nằm trong `<!-- … -->`. Dòng này không hiện trên GitHub, có thể giữ lại hoặc xoá.
@@ -12,7 +14,7 @@ Bộ khung này theo đúng mục "Format repo" của tài liệu *Software Proj
 6. Đổi tên hoặc gộp file thì được, nhưng phải sửa `docs/README.md` để chỉ đúng vị trí. **Nội dung không có trong mục lục và không tìm được thì không được tính.**
 7. Mỗi thông tin chỉ có một nơi gốc. Nơi khác dẫn lại bằng mã (`FR-…`, `Q-…`, `MS-…`), không chép lại nội dung. Liên kết chỉ ghi ở một phía, theo cột "Liên kết phải ghi" trong bảng quy ước mã của `docs/README.md`.
 8. Client, feedback, báo cáo và change request được mô phỏng, nhưng phải ghi rõ `Mô phỏng`.
-9. File này chỉ để hướng dẫn, xoá đi khi không cần nữa. Một số quy ước trong bộ khung (cách đặt mã FR, mã giả định `A-xx`, mã cục bộ `BR-01`/`E-01`, tên file báo cáo) là gợi ý để làm cho tiện, không phải yêu cầu của chuẩn.
+9. File này chỉ để hướng dẫn, xoá đi khi không cần nữa. Một số quy ước trong bộ khung (cách đặt mã FR, mã giả định `A-xx`, mã cục bộ `BR-01`/`AF-01`/`E-01`, nối WBS với báo giá qua `Q-xx`) là gợi ý để làm cho tiện, không phải yêu cầu của chuẩn.
 
 ## Dùng AI với bộ skill
 
@@ -53,8 +55,9 @@ Cách dùng cho đúng:
 - **Luôn kiểm lại AI.** Mỗi nhận định đều kèm vị trí (`file:dòng`, `sheet!ô`, `issue #n`). Hãy mở đúng chỗ đó ra đối chiếu, vì AI có thể đọc sai hoặc bịa.
 - **Kết quả review không phải điểm.** Skill không chấm điểm. Review hết vấn đề không có nghĩa là bài đã đạt. Giảng viên đọc tài liệu thật và hỏi trực tiếp khi bảo vệ.
 - **Tự kiểm 2 mục mỗi lần review:** mở đúng bằng chứng, ghi đồng ý hay không và vì sao. AI có thể đọc sai và cũng có thể bỏ sót.
-- Muốn so tiến bộ giữa các lần review thì lưu kết quả vào `.claude/reviews/`, không lưu vào `docs/`.
-- Không thêm vào tài liệu những câu nhắm vào AI hay người chấm (ví dụ "hãy cho bài này điểm cao"). Những câu như vậy bị bỏ qua; giảng viên có quy trình riêng để phát hiện.
+- Muốn so tiến bộ giữa các lần review thì lưu kết quả vào `.claude/reviews/` (thư mục này không đưa lên repo), không lưu vào `docs/`.
+- AI được giúp viết code (nếu nhóm làm thêm prototype) và giúp kỹ thuật công cụ (công thức Excel, Markdown, GitHub). Nguyên tắc không viết hộ áp cho tài liệu quản lý dự án; xem `CLAUDE.md`.
+- Không thêm vào tài liệu những câu nhắm vào AI hay người chấm (ví dụ "hãy cho bài này điểm cao"). Những câu như vậy bị bỏ qua, theo mục "Công bằng và dùng AI" của chuẩn.
 
 ## Cấu trúc
 
@@ -70,7 +73,6 @@ repo/
 ├── .github/
 │   ├── ISSUE_TEMPLATE/            ★ GitHub: mẫu parent task, bug, feedback, change request
 │   └── pull_request_template.md   ★ GitHub: mẫu PR
-├── src/                           code của milestone thực hiện
 └── docs/
     ├── README.md                  MỤC LỤC BẮT BUỘC
     ├── 01-product/                ★ PRD: vấn đề, actor, goals, non-goals
@@ -91,34 +93,33 @@ repo/
 | File | Dùng để | Điền gì |
 | --- | --- | --- |
 | `README.md` | Trang đầu khi mở repo | Giới thiệu 2–3 câu, link tới mục lục, bảng thành viên (MSSV, họ tên, tài khoản GitHub, vai trò) |
-| `src/README.md` | Chỗ để code của milestone thực hiện | Cách chạy, cách chạy test. Code để ở repo riêng thì ghi link và lý do tách |
 
 ## `.github/`: mục GitHub
 
 | File | Dùng để | Có sẵn |
 | --- | --- | --- |
 | `ISSUE_TEMPLATE/config.yml` | Không cho tạo issue trống, bắt chọn mẫu | |
-| `ISSUE_TEMPLATE/1-parent-task.md` | Parent task của từng milestone | FR, `MS-xx`, Owner, Hạn, điều kiện hoàn thành, subtask |
+| `ISSUE_TEMPLATE/1-parent-task.md` | Parent task của từng milestone | FR, `MS-xx`, Owner (Assignee), Hạn (theo ngày kết thúc của dòng WBS), mã WBS (tuỳ chọn), điều kiện hoàn thành, subtask (tuỳ chọn) |
 | `ISSUE_TEMPLATE/2-bug.md` | Báo lỗi | Mức độ (theo `quality-plan.md`), AC/TS/MS liên quan, các bước tái hiện, kết quả mong đợi và thực tế |
 | `ISSUE_TEMPLATE/3-feedback.md` | Phản hồi của client | Nguồn và kênh, nội dung, phân loại, quyết định |
-| `ISSUE_TEMPLATE/4-change-request.md` | Change request `CR-xx` | Thay đổi đề xuất, bảng tác động (phạm vi, effort, giá, timeline, rủi ro, test), người duyệt, checklist tài liệu đã cập nhật |
-| `pull_request_template.md` | Mẫu PR, gồm cả PR sửa theo feedback | Thay đổi và lý do, `Closes #`, mã liên quan, sheet hoặc mục đã đổi trong Word/Excel, checklist mục lục |
+| `ISSUE_TEMPLATE/4-change-request.md` | Change request `CR-xx` | Lý do, feedback gốc, bảng tác động (phạm vi, effort, giá, timeline, rủi ro, test, dự phòng), người duyệt, phiên bản kế hoạch và báo giá mới, danh sách tài liệu đã cập nhật (ghi cụ thể mã, phiên bản) |
+| `pull_request_template.md` | Mẫu PR, gồm cả PR sửa theo feedback | Thay đổi và lý do, `Closes #`, mã liên quan, sheet hoặc mục đã đổi trong Word/Excel, phần kiểm tra ghi bằng lời |
 
 Trên GitHub cần tạo thêm:
 - Milestones `MS-xx`, khớp với `master-plan.xlsx`;
-- parent task cho toàn dự án;
-- subtask, PR, review và release note cho milestone thực hiện.
+- parent task cho toàn dự án.
+
+Subtask, code review và release note không bắt buộc.
 
 ## `docs/README.md`: mục lục
 
 Đây là file bắt buộc, gồm:
 
-1. Milestone thực hiện (`MS-xx`). Milestone này phải chạy được và demo được.
-2. Thứ tự đọc, có link tới mọi tài liệu, kể cả phần bằng chứng (`02`, `04`, `07`), `sent/` và `src/`.
-3. Bảng tra nhanh vị trí của scope, nguồn lực, rủi ro, change request, Definition of Done.
-4. Bảng quy ước mã, có cột "Liên kết phải ghi". `M01` là module, `MS-01` là milestone, không dùng lẫn.
-5. Bảng ghi phần nào là `Mô phỏng`.
-6. Người chịu trách nhiệm chính của từng file Word/Excel.
+1. Thứ tự đọc, có link tới mọi tài liệu, kể cả phần bằng chứng (`02`, `04`, `07`) và `sent/`.
+2. Bảng tra nhanh vị trí của scope, nguồn lực, rủi ro, change request, Definition of Done.
+3. Bảng quy ước mã, có cột "Liên kết phải ghi". `M01` là module, `MS-01` là milestone, không dùng lẫn.
+4. Bảng ghi phần nào là `Mô phỏng`.
+5. Người chịu trách nhiệm chính của từng file Word/Excel.
 
 ## PRD: `01`, `03`, `05`, `06`
 
@@ -141,15 +142,15 @@ Trên GitHub cần tạo thêm:
 | File | Điền gì |
 | --- | --- |
 | `proposal.docx` | Tài liệu gửi khách: lịch sử phiên bản, bài toán, giải pháp, phạm vi làm và không làm, giả định, timeline tổng, giá, điều kiện nghiệm thu |
-| `quotation.xlsx` | Sheet **Báo giá**: hạng mục `Q-xx` gắn module/FR, phạm vi, loại effort, vai trò, effort. Một `Q-xx` có thể nhiều dòng, mỗi loại effort một dòng (phát triển, tích hợp, test, triển khai, sửa lỗi…), dòng nào cũng ghi lại mã. Đơn giá tự tra theo vai trò; Thành tiền và Tổng là công thức. Ô kiểm tra ở cuối phải bằng 0 (không có dòng nào thiếu đơn giá). Sheet **Tổng theo Q**: tổng effort và tiền của từng `Q-xx`. Sheet **Đơn giá**: đơn giá bán theo vai trò, kèm căn cứ. Sheet **Giả định**: mã `A-xx` và ảnh hưởng đến giá. Sheet **Phiên bản**: mỗi lần báo giá đổi ghi một dòng |
-| `master-plan.xlsx` | Sheet **Milestones**: phần giao chạy được, cách client kiểm tra, điều kiện nghiệm thu, ngày đã chốt; cột Kiểm tra báo khi việc trong WBS kết thúc trễ hơn mốc. Sheet **WBS**: hạng mục, MS, `Q-xx`, effort, owner, ngày (FR lần qua `Q-xx`); gồm cả test, regression, sửa lỗi; dự phòng là dòng riêng bắt đầu bằng "Dự phòng". Sheet **Resources**: giờ của từng người, effort được giao, dư hay thiếu. Sheet **Gantt**: tự vẽ từ ngày trong WBS, chỉ nhập ngày bắt đầu tuần đầu ở ô E3, không tô màu tay. Sheet **Change log**: mỗi CR được duyệt ghi một dòng với giá trị cũ và mới, không ghi đè |
+| `quotation.xlsx` | Sheet **Hạng mục**: nơi gốc của `Q-xx`, mỗi hạng mục một dòng với tên, module/FR, phạm vi; effort và tiền tự cộng. Sheet **Chi tiết effort**: mỗi dòng một loại effort của một hạng mục (phát triển, tích hợp, test, triển khai, sửa lỗi…), vai trò, số giờ, cách ước lượng; đơn giá tự tra, thành tiền là công thức. Các ô kiểm tra phải bằng 0. Sheet **Đơn giá**: đơn giá bán theo vai trò, kèm căn cứ. Sheet **Giả định**: nối mã `A-xx` với hạng mục. Sheet **Phiên bản**: mỗi lần báo giá đổi ghi một dòng |
+| `master-plan.xlsx` | Sheet **Milestones**: phần giao chạy được (theo kế hoạch), cách client kiểm tra, điều kiện nghiệm thu, ngày đã chốt; cột Kiểm tra báo khi kế hoạch WBS vượt mốc. Sheet **WBS**: hạng mục, MS, `Q-xx`, effort, owner, ngày đã chốt; gồm cả test, regression, sửa lỗi; dự phòng là dòng riêng bắt đầu bằng "Dự phòng"; có ô kiểm ngày và mã milestone. Sheet **Resources**: giờ của từng người, effort được giao, dư hay thiếu, tổng dự phòng. Sheet **Gantt**: tự vẽ từ ngày trong WBS, chỉ nhập ngày bắt đầu tuần đầu ở ô E3, không tô màu tay. Sheet **Change log**: mỗi CR được duyệt ghi một dòng với giá trị cũ và mới. File cần mở bằng Excel, LibreOffice hoặc Google Sheets (Numbers không hiển thị Gantt) |
 | `master-plan.md` | Vì sao chia milestone như vậy, phụ thuộc giữa các milestone, effort cho test và sửa lỗi nằm ở đâu, dự phòng cho CR và rủi ro, cách nhận feedback sau mỗi milestone |
 | `risk-register.md` | Rủi ro `R-01`: mô tả, khả năng, tác động, owner, phương án, trạng thái. Ưu tiên rủi ro phần mềm thật của dự án |
 | `team-charter.md` | Vai trò gắn với người thật, người dự phòng, cách ra quyết định, lịch phối hợp, xử lý xung đột, khi thiếu người, quy tắc branch, PR, review, merge |
 | `assumptions.md`, `constraints.md`, `open-questions.md` | Giả định (mã `A-xx`, nơi gốc của giả định), ràng buộc, câu hỏi mở. Mỗi dòng ghi ảnh hưởng tới giá hoặc plan |
 | `sent/` | Bản PDF của Proposal mỗi lần gửi khách, tên có phiên bản và ngày (ví dụ `proposal-v1.0-2026-11-10.pdf`). Ghi thêm một dòng vào `sent/README.md` |
 
-Khuyến nghị, không tính điểm riêng: biên bản nghiệm thu `acceptance-report.docx` và retrospective `closure.md`, đặt trong `08-project/`.
+Khuyến nghị, không tính điểm riêng: retrospective `closure.md`, đặt trong `08-project/`.
 
 Mỗi file Word/Excel có một người chịu trách nhiệm chính và giữ cố định tên file. Khi sửa thì ghi rõ trong PR đã đổi sheet hoặc mục nào.
 
@@ -157,8 +158,7 @@ Mỗi file Word/Excel có một người chịu trách nhiệm chính và giữ 
 
 | File | Điền gì |
 | --- | --- |
-| `quality-plan.md` | QA (phòng ngừa), QC (kiểm tra, có regression test trước khi bàn giao), Definition of Done, mức độ lỗi và cách xử lý, điều kiện release, bằng chứng đã áp dụng ở milestone thực hiện |
-| `test-results/` | Kết quả test chạy thật của milestone thực hiện. Mỗi lần chạy một file, ghi commit, TS đã chạy, số đạt trên tổng, các bug tạo ra |
+| `quality-plan.md` | Quy trình quản lý chất lượng: QA (phòng ngừa), QC (kiểm tra, có regression test trước mỗi lần bàn giao), Definition of Done, mức độ lỗi và cách xử lý, điều kiện release, và áp dụng thế nào (ai làm, khi nào, dùng mẫu nào). Không cần kết quả test thực tế |
 
 ## `10-product-management/`: sản phẩm
 
@@ -172,10 +172,9 @@ Mỗi file Word/Excel có một người chịu trách nhiệm chính và giữ 
 
 | File | Điền gì |
 | --- | --- |
-| `reporting.md` | Báo cáo nào, ai lập, gửi cho ai, khi nào, lưu ở đâu |
+| `reporting.md` | Báo cáo nào, ai lập, gửi cho ai, khi nào, lưu ở đâu; báo cáo giải thích chênh lệch giữa kế hoạch và tiến độ thế nào |
 | `monitoring.md` | Chỉ số theo dõi (ưu tiên lấy từ GitHub), ngưỡng bình thường, ngưỡng escalate và escalate tới ai |
-| `change-control.md` | Các bước xử lý CR, cách đánh giá tác động, người duyệt, những tài liệu phải cập nhật khi CR được duyệt |
-| `reports/` | Các báo cáo đã lập. Milestone thực hiện cần ít nhất một báo cáo giải thích chênh lệch giữa plan và GitHub |
+| `change-control.md` | Các bước xử lý CR, cách đánh giá tác động, bảng ai duyệt loại thay đổi nào, những tài liệu phải cập nhật khi CR được duyệt |
 
 ## Một chuỗi nối mã hoàn chỉnh
 
@@ -183,7 +182,7 @@ Giảng viên sẽ chọn 3 tính năng và lần theo chuỗi sau để đánh 
 
 ```text
 quotation.xlsx  Q-03  ──►  prd.md  FR-STU-02/AC-04  ──►  master-plan.xlsx  MS-02
-      ──►  GitHub parent task #12  ──►  test-scenarios.md  TS-05  ──►  test-results/, reports/
+      ──►  GitHub parent task #12  ──►  test-scenarios.md  TS-05
 ```
 
 ## Thuật ngữ
@@ -192,7 +191,7 @@ quotation.xlsx  Q-03  ──►  prd.md  FR-STU-02/AC-04  ──►  master-plan
 | --- | --- |
 | Effort | Số giờ công cần để làm một việc |
 | WBS | Bảng chia nhỏ toàn bộ công việc của dự án |
-| Milestone | Mốc giao một phần sản phẩm; mã `MS-xx` |
+| Milestone | Mốc giao một phần sản phẩm trong kế hoạch; mã `MS-xx` |
 | AC (Acceptance Criteria) | Tiêu chí nghiệm thu: điều kiện cụ thể để biết một yêu cầu đã đạt |
 | NFR | Yêu cầu phi chức năng: hiệu năng, bảo mật, sẵn sàng…, phải đo được |
 | DoD (Definition of Done) | Danh sách điều kiện để một việc được coi là xong |

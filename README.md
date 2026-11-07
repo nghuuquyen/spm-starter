@@ -4,8 +4,7 @@
 
 - Hướng dẫn dùng bộ khung: [`HUONG-DAN.md`](HUONG-DAN.md) (xoá khi không cần).
 - Tài liệu: bắt đầu từ [`docs/README.md`](docs/README.md) (mục lục, thứ tự đọc).
-- Việc đang làm: tab Issues và Milestones của repo này.
-- Mã nguồn: [`src/`](src/).
+- Kế hoạch công việc: tab Issues và Milestones của repo này.
 
 ## Thành viên
 

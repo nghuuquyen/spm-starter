@@ -19,4 +19,4 @@ labels: bug
 
 ## Xử lý
 
-<!-- Sửa ở PR nào; TS nào đã chạy lại để kiểm. -->
+<!-- Sửa ở đâu (PR), kiểm lại bằng kịch bản test nào. -->

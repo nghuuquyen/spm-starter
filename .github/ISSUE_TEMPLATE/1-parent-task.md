@@ -8,7 +8,8 @@ labels: task
 **FR:** FR-XXX-01, …
 **Milestone:** MS-xx
 **Owner:** <!-- gán người này làm Assignee của issue -->
-**Hạn:** <!-- nên trùng ngày của milestone, hoặc đặt ở trường ngày của GitHub Projects -->
+**Hạn:** <!-- lấy theo ngày Kết thúc của dòng WBS tương ứng; có thể đặt ở trường ngày của GitHub Projects -->
+**WBS:** <!-- tuỳ chọn: mã dòng WBS, để so kế hoạch với GitHub theo từng việc -->
 
 ## Mô tả
 
@@ -16,8 +17,8 @@ labels: task
 
 - [ ]
 
-## Subtask
+## Subtask (tuỳ chọn)
 
-<!-- Bắt buộc cho milestone thực hiện. -->
+<!-- Chuẩn không bắt buộc subtask. Nếu tách, dùng sub-issue của GitHub hoặc liệt kê ở đây. -->
 
 - [ ]

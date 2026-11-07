@@ -1,6 +1,6 @@
 # Review: Product
 
-Tìm theo mục lục của nhóm. Vị trí trong bộ khung: `docs/10-product-management/` (feedback-process, roadmap, success-metrics) hoặc vị trí mục lục chỉ tới.
+Tìm theo mục lục của nhóm. Vị trí trong bộ khung: `docs/10-product-management/` (feedback-process, roadmap, success-metrics).
 
 ## Vì sao quan trọng
 
@@ -10,20 +10,18 @@ Bàn giao không phải là hết dự án. Sau đó cần biết: người dùn
 
 Kênh feedback, phân loại, ưu tiên, roadmap, chỉ số giá trị, ai quyết định sau bàn giao.
 
-## Mục tiêu chất lượng
+## Hướng tới
 
-- Chung chung: chỉ nêu ý định lắng nghe khách.
-- Cụ thể: có luồng feedback, phân loại, ưu tiên, roadmap.
-- Dùng được ngay: có chỉ số giá trị và rõ ai quyết định sau bàn giao.
+Chỉ số giá trị có mục tiêu và cách đo; rõ ai quyết định sau bàn giao.
 
 ## Các bước kiểm
 
-1. Kênh feedback: cụ thể là kênh nào, ai nhận? Có dùng mẫu issue "Feedback" không?
-2. Phân loại: bug, change request, cải tiến được phân thế nào? Mỗi loại đi tiếp vào quy trình nào (bug vào quality, CR vào governance)?
+1. Kênh feedback: cụ thể là kênh nào, ai nhận? Có dùng mẫu issue feedback không?
+2. Phân loại: bug, change request, cải tiến được phân thế nào? Mỗi loại đi tiếp vào quy trình nào (bug vào quality, CR vào change control)?
 3. Ưu tiên: tiêu chí ưu tiên cụ thể là gì, ai sắp xếp?
-4. Roadmap: các giai đoạn sau bàn giao, điều kiện để làm từng giai đoạn.
-5. Chỉ số giá trị: đo giá trị cho người dùng hay khách (không phải chỉ số kỹ thuật), có mục tiêu, cách đo, tần suất, người theo dõi?
-6. Ai quyết định sau bàn giao: một người hoặc vai trò cụ thể phía khách hay phía nhóm?
+4. Roadmap: các giai đoạn, điều kiện để làm từng giai đoạn.
+5. Chỉ số giá trị: có mục tiêu, cách đo, tần suất, người theo dõi không? (Gợi ý) Chỉ số đo giá trị cho người dùng hay chỉ là chỉ số kỹ thuật?
+6. Ai quyết định sau bàn giao: một người hoặc vai trò cụ thể?
 7. Quyết định trong phần Product có lệch PRD không (bỏ hoặc thêm tính năng mà PRD không có, mà không qua CR)?
 8. Feedback, số liệu ví dụ là mô phỏng thì đã ghi `Mô phỏng` chưa?
 

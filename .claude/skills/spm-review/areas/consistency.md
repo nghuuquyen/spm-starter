@@ -1,6 +1,6 @@
 # Review: Nhất quán (chuỗi nối giữa các tài liệu)
 
-Đối số: một mã FR hoặc tên tính năng, ví dụ `/spm-review consistency FR-STU-02`. Không có thì chọn 3 tính năng quan trọng nhất của PRD, ít nhất 1 tính năng thuộc milestone thực hiện, và nói rõ vì sao chọn.
+Đối số: một mã FR hoặc tên tính năng, ví dụ `/spm-review consistency FR-STU-02`. Không có thì chọn 3 tính năng quan trọng nhất của PRD và nói rõ vì sao chọn.
 
 ## Vì sao quan trọng
 
@@ -8,15 +8,13 @@ Một dự án nhất quán là khi giá, effort, kế hoạch, task và test c�
 
 ## Chuẩn yêu cầu
 
-- Chuỗi: Proposal và báo giá → PRD → Master Plan → parent task → test → báo cáo. Tính năng chưa thực hiện chỉ cần lần đến kịch bản test.
+- Chuỗi: Proposal và báo giá → PRD → Master Plan → parent task → kịch bản test.
 - Mỗi yêu cầu, việc, thay đổi có mã riêng. Liên kết chỉ khai báo ở một phía; phía nào ghi liên kết nào xem cột "Liên kết phải ghi" trong bảng quy ước mã của chuẩn.
-- `traceability-matrix.md` tổng hợp theo từng AC (AC → Test → Parent task → Milestone → Báo giá), không phải nơi gốc để sửa.
+- Ma trận truy vết tổng hợp theo từng AC (AC → Test → Parent task → Milestone → Báo giá), không phải nơi gốc để sửa.
 
-## Mục tiêu chất lượng
+## Hướng tới
 
-- Chung chung: nhiều chỗ đứt giữa các tài liệu.
-- Cụ thể: 3 tính năng được chọn lần được qua các tài liệu, chỉ có lỗi nhỏ.
-- Dùng được ngay: giá, effort, plan, task, test khớp nhau; quyết định kỹ thuật lớn phản ánh vào effort, rủi ro, timeline.
+Giá, effort, plan, task, test khớp nhau; quyết định kỹ thuật lớn phản ánh vào effort, rủi ro, timeline.
 
 ## Các bước kiểm
 
@@ -24,27 +22,20 @@ Với mỗi tính năng, đi từng mắt xích và ghi **có / thiếu / mâu t
 
 1. **Báo giá:** hạng mục `Q-xx` nào chứa FR hoặc module này? Effort bao nhiêu, có phần tích hợp, test không?
 2. **PRD:** FR ở file nào, có những AC nào?
-3. **Master Plan:** thuộc `MS-xx` nào, những dòng WBS nào (WBS dẫn tới `Q-xx`, nên lần từ `Q-xx` của bước 1)? Tổng effort các dòng đó có khớp effort của `Q-xx` không? Ngày có nằm trong mốc không?
+3. **Master Plan:** thuộc `MS-xx` nào, những dòng WBS nào? (Bộ khung nối WBS với `Q-xx`; nhóm nối cách khác lần được cũng được.) Tổng effort các dòng đó có khớp effort của hạng mục báo giá không? Ngày có nằm trong mốc không?
 4. **GitHub:** parent task `#n` nào ghi mã FR này, cùng `MS-xx`, có owner, hạn, điều kiện hoàn thành? Nội dung task có khớp PRD không?
-5. **Test:** `TS-xx` nào ghi mã các AC này? AC nào chưa có test?
-6. **Kết quả và báo cáo** (chỉ tính năng thuộc milestone thực hiện): có kết quả test chạy thật, có trong báo cáo không?
-7. **Ma trận truy vết:** các dòng của tính năng này có khớp với những gì vừa lần được không?
+5. **Kịch bản test:** kịch bản nào ghi mã các AC này? AC nào chưa có kịch bản?
+6. **Ma trận truy vết:** các dòng của tính năng này có khớp với những gì vừa lần được không?
 
-Sau đó so thêm các con số dùng ở nhiều nơi:
-
-- tổng giá (proposal so với báo giá);
-- danh sách và ngày milestone (proposal, master plan, GitHub);
-- effort (báo giá so với WBS);
-- số người (Resources so với Team Charter);
-- thời hạn và giới hạn trong FR so với workflow, task, test.
+Sau đó so thêm các con số dùng ở nhiều nơi: tổng giá (proposal so với báo giá), danh sách và ngày milestone (proposal, kế hoạch, GitHub), effort (báo giá so với WBS), số người (Resources so với Team Charter), thời hạn và giới hạn trong FR so với workflow, task, test. Bạn được tự cộng hoặc so để kiểm, và ghi phép tính làm bằng chứng.
 
 ## Cách trình bày thêm
 
-Trước danh sách vấn đề, đặt một bảng chuỗi cho từng tính năng:
+Trước các mục góp ý, đặt **một** bảng chuỗi gộp cho các tính năng đã lần:
 
-| Mắt xích | Mã | Vị trí | Trạng thái |
-| --- | --- | --- | --- |
-| Báo giá | | | có / thiếu / mâu thuẫn |
+| Tính năng | Báo giá | PRD | Plan | Task | Test |
+| --- | --- | --- | --- | --- | --- |
+| `FR-…` | có / thiếu / mâu thuẫn | | | | |
 
 Với mỗi chỗ đứt, nói rõ sửa ở **nơi gốc** nào (không sửa trong ma trận truy vết trước). Không tự sửa số liệu: giá, effort, ngày là quyết định của nhóm.
 
@@ -56,7 +47,7 @@ Với mỗi chỗ đứt, nói rõ sửa ở **nơi gốc** nào (không sửa t
 ## Chỗ hay bị sót
 
 - Chuỗi đứt ngay mắt đầu vì không có báo giá theo hạng mục.
-- Proposal và Master Plan dùng hai bộ mốc khác nhau.
+- Proposal và kế hoạch dùng hai bộ mốc khác nhau.
 - Task GitHub ghi thời hạn hoặc quy tắc khác PRD.
 - Test trỏ tới FR, không trỏ tới AC.
-- Ma trận truy vết có cột nhưng không có cột báo giá, task, milestone; hoặc rỗng.
+- Ma trận truy vết thiếu cột báo giá, task, milestone; hoặc rỗng.

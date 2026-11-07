@@ -11,22 +11,18 @@ Tài liệu này nêu format cần nộp, tiêu chí chấm và cách phản h�
 
 ## Phạm vi thực hiện
 
-Tài liệu và kế hoạch làm đủ cho toàn dự án; phần chạy thật chỉ cần tối thiểu một milestone.
+Tài liệu và kế hoạch làm đủ cho toàn dự án; không yêu cầu làm phần mềm chạy thật.
 
-| Phần | Toàn dự án | Milestone thực hiện |
-| --- | --- | --- |
-| Proposal, báo giá, PRD, Master Plan, rủi ro, Team Charter, Quality, Product, Quản trị | Làm đủ | Cập nhật nếu có thay đổi |
-| Milestone và parent task trên GitHub | Tạo đủ | Theo dõi đến khi xong |
-| Subtask, PR, code review | Không bắt buộc | Có |
-| Kiểm thử | Có kịch bản test cho các AC | Có kết quả test thực tế |
-| Demo và release note | Không bắt buộc | Có |
-| Feedback và báo cáo | Có quy trình | Có ít nhất một vòng |
-| Change request | Có quy trình | Áp dụng nếu có thay đổi |
+| Phần | Yêu cầu |
+| --- | --- |
+| Proposal, báo giá, PRD, Master Plan, rủi ro, Team Charter, Quality, Product, Quản trị | Làm đủ cho toàn dự án |
+| Milestone và parent task trên GitHub | Tạo đủ cho toàn dự án, khớp Master Plan |
+| Kiểm thử | Có kịch bản test cho các AC; quy trình kiểm thử nằm trong kế hoạch chất lượng |
+| Feedback, báo cáo, change request | Có quy trình rõ, áp dụng được |
+| Code, subtask, code review, kết quả test, demo, release note | Không yêu cầu |
 
-- Nhóm ghi rõ milestone thực hiện trong `docs/README.md`. Milestone đó phải chạy được và demo được.
 - Client, feedback, báo cáo và change request được phép mô phỏng, nhưng phải ghi rõ `Mô phỏng`, không trình bày như dữ liệu thật.
-- Làm nhiều milestone hơn không được cộng điểm riêng. Điểm dựa trên chất lượng kế hoạch và bằng chứng của phần đã làm.
-- Milestone chưa thực hiện chỉ chấm phần kế hoạch, không bị trừ vì chưa có code, kết quả test hay release.
+- Điểm dựa trên chất lượng tài liệu và kế hoạch. Không bị trừ vì chưa có code, kết quả test hay release.
 
 ## Quy trình
 
@@ -51,7 +47,7 @@ Có 3 vòng feedback, mỗi vòng một trọng tâm, rồi chốt bản cuối 
 
 ## Format repo
 
-Tài liệu nằm trong repo, còn việc đang diễn ra nằm trên GitHub. Tên file và thư mục có thể khác nếu nhóm có lý do, nhưng `docs/README.md` phải chỉ đúng vị trí từng nội dung.
+Tài liệu nằm trong repo, còn kế hoạch công việc (milestone, parent task) nằm trên GitHub. Tên file và thư mục có thể khác nếu nhóm có lý do, nhưng `docs/README.md` phải chỉ đúng vị trí từng nội dung.
 
 ```text
 repo/
@@ -59,7 +55,6 @@ repo/
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
 │   └── pull_request_template.md
-├── src/
 └── docs/
     ├── README.md
     ├── 01-product/
@@ -86,8 +81,7 @@ repo/
     │   ├── open-questions.md
     │   └── sent/
     ├── 09-quality/
-    │   ├── quality-plan.md
-    │   └── test-results/
+    │   └── quality-plan.md
     ├── 10-product-management/
     │   ├── feedback-process.md
     │   ├── roadmap.md
@@ -95,8 +89,7 @@ repo/
     └── 11-governance/
         ├── reporting.md
         ├── monitoring.md
-        ├── change-control.md
-        └── reports/
+        └── change-control.md
 ```
 
 | Định dạng | Dùng cho | Quy định |
@@ -104,7 +97,7 @@ repo/
 | Word, kèm PDF khi gửi | Tài liệu gửi khách: Proposal | Bản đã gửi lưu trong `sent/`, có phiên bản và ngày |
 | Excel | Phần cần tính toán: báo giá, Master Plan, nguồn lực | Số liệu nằm trong ô dữ liệu; Gantt vẽ từ ngày, không tô tay |
 | Markdown | Tài liệu team đọc và review: PRD, Team Charter, Quality, Product, Quản trị, rủi ro | Mỗi thông tin chỉ có một nơi gốc, nơi khác dẫn lại mã |
-| GitHub | Việc đang diễn ra: task, bug, feedback, change request, release | Dùng mẫu issue và link đến mã liên quan |
+| GitHub | Kế hoạch công việc: milestone, parent task; mẫu issue cho bug, feedback, change request | Dùng mẫu issue và link đến mã liên quan |
 
 `docs/README.md` là mục lục bắt buộc: nêu thứ tự đọc và vị trí của scope, nguồn lực, rủi ro, change request, Definition of Done. Nhóm nhỏ có thể gộp file, nhưng không để file rỗng; phần không áp dụng ghi `N/A` kèm lý do.
 
@@ -146,11 +139,11 @@ Bảng này là phần phải có; mức độ tốt đến đâu được chấ
 | PRD | `01-product`, `03-modules`, `05`, `06` | Vấn đề, actor, goals và non-goals, FR theo mẫu, NFR đo được, AC |
 | Master Plan | `master-plan.xlsx`, `master-plan.md` | Sheet Milestones, WBS, Resources, Gantt, Change log; một trang giải thích cách chia milestone |
 | Rủi ro | `risk-register.md` | Mô tả, khả năng xảy ra, tác động, owner, phương án, trạng thái |
-| GitHub | Milestones, Issues, Releases | Milestone `MS-xx`, parent task cho toàn dự án, mẫu issue cho bug, feedback, CR; subtask và release note cho milestone thực hiện |
+| GitHub | Milestones, Issues | Milestone `MS-xx`, parent task cho toàn dự án, mẫu issue cho bug, feedback, CR |
 | Team Charter | `team-charter.md` | Vai trò, trách nhiệm, cách ra quyết định, lịch phối hợp, xử lý xung đột, quy tắc branch, PR, review, merge |
-| Quality | `quality-plan.md`, `test-results/` | QA, QC, Definition of Done chung, mức độ lỗi, điều kiện release, kết quả test của milestone thực hiện |
+| Quality | `quality-plan.md` | QA, QC, Definition of Done chung, mức độ lỗi, điều kiện release |
 | Product | `10-product-management/` | Kênh feedback, phân loại, ưu tiên, roadmap, chỉ số giá trị, ai quyết định sau bàn giao |
-| Quản trị và giám sát | `11-governance/` | Ai báo cáo gì, cho ai, khi nào; chỉ số theo dõi; ngưỡng escalate; quy trình change request; báo cáo cho milestone thực hiện |
+| Quản trị và giám sát | `11-governance/` | Ai báo cáo gì, cho ai, khi nào; chỉ số theo dõi; ngưỡng escalate; quy trình change request |
 
 **Mẫu FR**
 
@@ -160,14 +153,14 @@ Mỗi FR gồm: Mô tả, Actor, Priority, Preconditions, Luồng chính, Busine
 
 - Trong kế hoạch, mỗi milestone hướng đến một phần phần mềm chạy được để client tự dùng thử, không phải chỉ tài liệu hoặc một tầng kỹ thuật.
 - Nên chia theo workflow, ví dụ `MS-01` là sinh viên đăng nhập, gửi ticket, xem trạng thái.
-- Phần mới không làm hỏng phần đã chạy: có regression test trước khi bàn giao.
+- Kế hoạch có regression test trước mỗi lần bàn giao, để phần mới không làm hỏng phần đã giao.
 - Client có thể đổi ý sau feedback; thay đổi được xử lý qua change request và kế hoạch nên chừa năng lực cho việc này.
 
 **Tiến độ**
 
-`master-plan.xlsx` lưu mốc đã chốt, GitHub thể hiện thực tế, báo cáo giải thích chênh lệch. Khi CR được duyệt, ghi phiên bản mới vào Change log thay vì ghi đè không dấu vết.
+`master-plan.xlsx` lưu mốc đã chốt, milestone và parent task trên GitHub khớp với các mốc đó. Khi CR được duyệt, ghi phiên bản mới vào Change log thay vì ghi đè không dấu vết.
 
-**Khuyến nghị, không tính điểm riêng:** biên bản nghiệm thu `acceptance-report.docx` và retrospective `closure.md` trong `08-project/`.
+**Khuyến nghị, không tính điểm riêng:** retrospective `closure.md` trong `08-project/`.
 
 ## Tiêu chí chấm tài liệu
 
@@ -178,16 +171,16 @@ Mỗi mục được đánh giá theo các mức dưới đây; mức 0 là thi�
 | Proposal và báo giá | Mô tả chung, giá không có cơ sở | Rõ bài toán và phạm vi; giá tính được từ effort | Effort có cả tích hợp, test, triển khai, sửa lỗi; giả định ảnh hưởng giá được nêu rõ; khách đủ thông tin để quyết định |
 | PRD | Chỉ liệt kê tính năng, AC khó kiểm tra | FR đúng mẫu, NFR đo được, AC test được | Mỗi rule và error flow có AC; ưu tiên hợp lý; phạm vi khớp goals và non-goals |
 | Master Plan | Mốc chia theo tầng kỹ thuật hoặc chỉ giao tài liệu; thiếu nguồn lực hoặc rủi ro | Mỗi milestone giao phần chạy được; có phụ thuộc, nguồn lực, rủi ro | Có cách client kiểm tra, cách nhận feedback, năng lực dự phòng; rủi ro phần mềm có owner và phương án |
-| GitHub | Có milestone và task nhưng không khớp plan hoặc quá chung | Khớp plan; parent task có FR, owner, hạn, điều kiện hoàn thành | Dev tách được subtask không cần hỏi lại; milestone thực hiện theo dõi được tiến độ thật từ task |
+| GitHub | Có milestone và task nhưng không khớp plan hoặc quá chung | Khớp plan; parent task có FR, owner, hạn, điều kiện hoàn thành | Dev tách được subtask không cần hỏi lại; theo dõi được tiến độ từ task |
 | Team Charter | Chỉ liệt kê vai trò | Rõ trách nhiệm và cách ra quyết định | Có quy tắc làm việc trên code, xử lý xung đột và khi thiếu người |
-| Quality | Nói chung về QA và QC | Có QA, QC, Definition of Done và tiêu chí kiểm tra được | Có xử lý lỗi theo mức độ, điều kiện release và bằng chứng đã áp dụng ở milestone thực hiện |
+| Quality | Nói chung về QA và QC | Có QA, QC, Definition of Done và tiêu chí kiểm tra được | Có xử lý lỗi theo mức độ, điều kiện release và quy trình áp dụng được ngay: rõ ai làm, khi nào, dùng mẫu nào |
 | Product | Chỉ nêu ý định lắng nghe khách | Có luồng feedback, phân loại, ưu tiên, roadmap | Có chỉ số giá trị và rõ ai quyết định sau bàn giao |
-| Quản trị và giám sát | Lịch họp và báo cáo chung chung | Rõ ai báo gì, cho ai, khi nào; CR có người duyệt | Theo dõi bằng số liệu từ GitHub; có ngưỡng escalate; CR có đánh giá tác động và cập nhật đồng bộ |
+| Quản trị và giám sát | Lịch họp và báo cáo chung chung | Rõ ai báo gì, cho ai, khi nào; CR có người duyệt | Chỉ số theo dõi lấy được từ GitHub; có ngưỡng escalate; CR có đánh giá tác động và cập nhật đồng bộ |
 | Nhất quán | Nhiều chỗ đứt giữa các tài liệu | 3 tính năng được chọn lần được qua các tài liệu, chỉ có lỗi nhỏ | Giá, effort, plan, task, test khớp nhau; quyết định kỹ thuật lớn phản ánh vào effort, rủi ro, timeline |
 
 **Cách chấm phần Nhất quán**
 
-Giảng viên chọn 3 tính năng quan trọng trong PRD và lần theo chuỗi: Proposal và báo giá → PRD → Master Plan → parent task → test → báo cáo. Có ít nhất 1 tính năng thuộc milestone thực hiện; tính năng chưa thực hiện chỉ cần lần đến kịch bản test.
+Giảng viên chọn 3 tính năng quan trọng trong PRD và lần theo chuỗi: Proposal và báo giá → PRD → Master Plan → parent task → kịch bản test.
 
 **Quy tắc áp dụng**
 

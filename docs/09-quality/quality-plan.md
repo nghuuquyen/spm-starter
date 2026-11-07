@@ -10,7 +10,9 @@
 
 ## Definition of Done
 
-- [ ]
+<!-- DoD áp cho mọi việc (đã review, tài liệu cập nhật…); AC áp riêng cho từng FR; điều kiện release áp cho cả bản giao. Ghi DoD thành các điều kiện kiểm được. -->
+
+- 
 
 ## Mức độ lỗi và cách xử lý
 
@@ -22,6 +24,6 @@
 
 <!-- Điều kiện kiểm được, ví dụ: số lỗi còn mở theo từng mức, tỷ lệ TS đạt, bộ regression đã chạy đạt, ai ký duyệt. -->
 
-## Bằng chứng áp dụng ở milestone thực hiện
+## Áp dụng quy trình
 
-<!-- Link tới `test-results/`, PR, review, bug đã xử lý của milestone thực hiện. -->
+<!-- Quy trình chất lượng chạy thế nào trong dự án: ai làm việc gì, khi nào (theo milestone nào), dùng mẫu hay công cụ nào (mẫu bug trên GitHub, checklist review…). -->

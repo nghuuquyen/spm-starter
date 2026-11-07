@@ -14,7 +14,7 @@
 
 ## Dự phòng cho thay đổi và rủi ro
 
-<!-- Phần chừa cho việc chưa biết trước: CR, rủi ro xảy ra. Bao nhiêu giờ, nằm ở dòng WBS "Dự phòng" nào; có tính vào giá không, hay CR được báo giá riêng. Đừng tính trùng với effort sửa lỗi ở trên. -->
+<!-- Phần chừa cho việc chưa biết trước: CR, rủi ro xảy ra. Bao nhiêu giờ, nằm ở dòng WBS "Dự phòng" nào (sheet Resources tự tính tổng và tỷ lệ); có tính vào giá không, hay CR được báo giá riêng. Đừng tính trùng với effort sửa lỗi ở trên. -->
 
 ## Cách nhận feedback của client sau mỗi milestone
 
