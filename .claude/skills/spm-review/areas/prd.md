@@ -43,7 +43,7 @@ PRD là thỏa thuận về "thế nào là xong". Dev dựa vào đó để là
 
 Nếu nhóm chỉ có ý tưởng, đừng viết FR hộ. Hỏi lần lượt và để nhóm tự trả lời: ai dùng, dùng khi nào, cần gì có sẵn trước, các bước chính, quy tắc nào giới hạn, có cách khác để đi tới cùng kết quả không, sai ở đâu và hệ thống báo gì, trường hợp biên nào (rỗng, quá giới hạn, trùng, hết hạn). Từ câu trả lời của nhóm, chỉ ra mục nào của mẫu đã có ý, mục nào còn trống.
 
-## Lỗi hay gặp
+## Chỗ hay bị sót
 
 - FR chỉ có mô tả và luồng chính; thiếu Priority, Alternative, Edge Case.
 - Error flow có nhưng không có AC nào kiểm nó.

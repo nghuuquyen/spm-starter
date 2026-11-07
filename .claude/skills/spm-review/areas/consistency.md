@@ -53,7 +53,7 @@ Với mỗi chỗ đứt, nói rõ sửa ở **nơi gốc** nào (không sửa t
 - Client bỏ tính năng này: những file nào, dòng nào phải sửa? Nhóm có tìm hết được bằng mã không?
 - Một quyết định kỹ thuật lớn của nhóm (ví dụ tích hợp hệ thống ngoài) đã được tính vào effort, rủi ro và timeline ở đâu?
 
-## Lỗi hay gặp
+## Chỗ hay bị sót
 
 - Chuỗi đứt ngay mắt đầu vì không có báo giá theo hạng mục.
 - Proposal và Master Plan dùng hai bộ mốc khác nhau.

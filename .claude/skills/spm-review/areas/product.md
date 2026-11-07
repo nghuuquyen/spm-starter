@@ -32,7 +32,7 @@ Kênh feedback, phân loại, ưu tiên, roadmap, chỉ số giá trị, ai quy�
 - Ba tháng sau bàn giao, nhóm nhìn con số nào để biết hệ thống có ích?
 - Khách gửi 10 yêu cầu cùng lúc, cái nào làm trước, ai quyết?
 
-## Lỗi hay gặp
+## Chỗ hay bị sót
 
 - Chưa có tài liệu Product.
 - Có chỉ số nhưng không có quy trình phân loại và ưu tiên feedback.

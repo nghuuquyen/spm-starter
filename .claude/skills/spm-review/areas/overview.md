@@ -1,6 +1,6 @@
 # Review: Tổng thể
 
-Dùng trước mỗi vòng feedback hoặc trước khi nộp. Mục tiêu: tìm **10 vấn đề quan trọng nhất** của cả repo, không phải liệt kê mọi lỗi nhỏ.
+Dùng trước mỗi vòng feedback hoặc trước khi nộp. Mục tiêu: chọn ra những góp ý **có ích nhất** cho cả repo (tối đa 10 mục "Cần bổ sung"), không phải liệt kê mọi chỗ nhỏ.
 
 ## Các bước
 
@@ -10,7 +10,7 @@ Dùng trước mỗi vòng feedback hoặc trước khi nộp. Mục tiêu: tìm
 4. Kiểm milestone: mỗi milestone có giao phần mềm chạy được để client tự dùng thử không? Milestone thực hiện đã khai báo và có bằng chứng chạy được chưa?
 5. Kiểm `Mô phỏng`: client, feedback, báo cáo, CR mô phỏng đã ghi rõ chưa?
 
-## Chọn 10 vấn đề
+## Chọn góp ý
 
 Ưu tiên theo thứ tự:
 
@@ -22,7 +22,7 @@ Dùng trước mỗi vòng feedback hoặc trước khi nộp. Mục tiêu: tìm
 6. Nội dung có nhưng khó tìm (nhãn `ẩn`).
 7. Trình bày.
 
-Gộp các lỗi cùng gốc thành một vấn đề. Ví dụ "29 FR đều thiếu Priority" là một vấn đề, không phải 29.
+Gộp các chỗ cùng gốc thành một góp ý. Ví dụ "29 FR đều chưa có Priority" là một góp ý, không phải 29. Ghi nhận rõ những phần nhóm đã làm tốt trước khi nêu góp ý.
 
 ## Cuối bản review tổng thể
 

@@ -39,7 +39,7 @@ Tài liệu nói kế hoạch, GitHub cho thấy thực tế. Parent task rõ r�
 - Một bạn mới vào nhóm, chỉ đọc parent task, có biết phải làm gì và khi nào là xong không?
 - Nhìn GitHub, nhóm trả lời được "milestone thực hiện đã xong bao nhiêu phần trăm" bằng số liệu nào?
 
-## Lỗi hay gặp
+## Chỗ hay bị sót
 
 - Issue chỉ có tiêu đề, body rỗng, không assignee, không hạn.
 - Owner ghi vai trò ("Backend Dev") thay vì người thật.

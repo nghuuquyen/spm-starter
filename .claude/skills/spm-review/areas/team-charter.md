@@ -32,7 +32,7 @@ Vai trò, trách nhiệm, cách ra quyết định, lịch phối hợp, xử l�
 - Hai bạn không thống nhất về phạm vi một FR, ai quyết cuối cùng và trong bao lâu?
 - Người giữ file báo giá ốm một tuần đúng lúc cần sửa giá, nhóm làm gì?
 
-## Lỗi hay gặp
+## Chỗ hay bị sót
 
 - Vai trò chỉ là danh sách chức danh, không gắn tên người.
 - Quy tắc copy từ mẫu: số người biểu quyết, công cụ không khớp với nhóm.

@@ -38,7 +38,7 @@ Proposal là cam kết đầu tiên với khách: làm gì, không làm gì, bao
 - Một tính năng tốn effort nhiều nhất nằm ở `Q-xx` nào? Effort đó tính thế nào?
 - Nếu thời gian tích hợp gấp đôi dự kiến, giá và timeline đổi thế nào?
 
-## Lỗi hay gặp
+## Chỗ hay bị sót
 
 - Không có báo giá theo hạng mục; chỉ có bảng ngân sách nhân sự theo tháng.
 - Giá bán không suy ra được từ chi phí hay effort, hoặc chênh lệch lớn mà không giải thích.

@@ -30,11 +30,14 @@ Thư mục `.claude/skills/` có 2 skill để dùng với công cụ AI trong l
 | `/spm-review product` | Quản lý sản phẩm sau bàn giao |
 | `/spm-review governance` | Báo cáo, giám sát, change request |
 | `/spm-review consistency FR-…` | Lần một tính năng qua báo giá → PRD → plan → task → test → báo cáo |
-| `/spm-review overview` | Toàn bộ repo, chọn ra 10 vấn đề quan trọng nhất |
+| `/spm-review overview` | Toàn bộ repo, chọn ra những góp ý quan trọng nhất |
+| `/spm-review r1` | Trước vòng feedback 1: lỗi lớn (hiểu sai bài toán, thiếu tài liệu, milestone không giao được phần chạy được, mâu thuẫn lớn về giá hoặc plan) |
+| `/spm-review r2` | Trước vòng feedback 2: liên kết (chuỗi báo giá → PRD → plan → task → test; mỗi rule và error flow có AC) |
+| `/spm-review r3` | Trước vòng feedback 3 và trước khi chốt: hoàn thiện (issue cũ đã xử lý thật chưa, độ sâu nội dung, format, vấn đáp thử) |
 
 Mỗi hạng mục có hướng dẫn riêng trong `.claude/skills/spm-review/areas/`: vì sao phần đó quan trọng, chuẩn yêu cầu gì, thế nào là chung chung và thế nào là dùng được ngay, câu hỏi để nhóm tự trả lời, lỗi hay gặp. Nên đọc file đó trước khi viết phần tương ứng.
 
-Kết quả review dùng cùng mẫu với issue feedback của giảng viên: nhãn `ẩn` / `mâu thuẫn` / `thiếu`, bằng chứng, vấn đề, vì sao quan trọng, tác động, câu hỏi cho nhóm, hoàn thành khi. Đang sửa theo một issue feedback thì đưa issue đó cho skill để kiểm lại điều kiện "Hoàn thành khi".
+Kết quả review gồm: phần nhóm đã làm tốt; phần **cần bổ sung** theo chuẩn (cùng mẫu với issue feedback của giảng viên: nhãn `ẩn` / `mâu thuẫn` / `thiếu`, bằng chứng, hiện trạng, vì sao quan trọng, tác động, câu hỏi cho nhóm, hoàn thành khi); và vài **gợi ý thêm** không bắt buộc. Skill tôn trọng cách làm riêng của nhóm: đặt file khác chỗ, chia milestone khác, miễn đáp ứng chuẩn và mục lục chỉ đúng. Đang sửa theo một issue feedback thì đưa issue đó cho skill để kiểm lại điều kiện "Hoàn thành khi".
 
 **`spm-defense-practice`: luyện bảo vệ cá nhân.** AI hỏi thử từng câu theo 3 loại câu bảo vệ, dựa trên tài liệu của nhóm, rồi nhận xét câu trả lời đã bám tài liệu chưa và chỉ ra chỗ cần đọc lại.
 

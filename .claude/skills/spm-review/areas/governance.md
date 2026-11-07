@@ -38,7 +38,7 @@ Quản trị trả lời: ai biết gì, khi nào, và khi lệch kế hoạch t
 - Hôm nay milestone thực hiện đang xanh, vàng hay đỏ? Nhóm trả lời bằng số liệu nào trên GitHub?
 - Client muốn thêm một bước duyệt vào luồng chính sau `MS-01`. Đi qua quy trình CR của nhóm từng bước, tài liệu nào phải sửa?
 
-## Lỗi hay gặp
+## Chỗ hay bị sót
 
 - Báo cáo có tần suất nhưng không rõ gửi cho ai.
 - Chỉ số chung chung, không lấy từ GitHub; hoặc GitHub không có assignee và hạn nên không tính được.

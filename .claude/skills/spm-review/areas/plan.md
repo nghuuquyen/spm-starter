@@ -42,7 +42,7 @@ Kế hoạch trả lời: giao gì, khi nào, ai làm, và nếu có chuyện th
 - Nếu milestone 2 trễ một tuần, những gì phía sau bị ảnh hưởng?
 - Rủi ro nào nhóm thấy dễ xảy ra nhất, ai theo dõi, dấu hiệu nào cho biết nó đang xảy ra?
 
-## Lỗi hay gặp
+## Chỗ hay bị sót
 
 - Không có Master Plan, chỉ có vài bảng rời rạc ở các tài liệu khác nhau.
 - Hai hoặc nhiều bộ mốc khác nhau giữa proposal, lịch trình và GitHub.

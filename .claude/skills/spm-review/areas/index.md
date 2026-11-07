@@ -33,7 +33,7 @@ Mục lục là cửa vào của toàn bộ tài liệu. Khách hàng, giảng v
 - Nếu hai tài liệu nói khác nhau về cùng một thông tin, tài liệu nào là gốc?
 - Còn tài liệu nào trong repo mà chính nhóm cũng không chắc có còn dùng không?
 
-## Lỗi hay gặp
+## Chỗ hay bị sót
 
 - Không có `docs/README.md`, hoặc dùng `README.md` ở gốc repo nhưng chỉ có giới thiệu chung, không có vị trí từng nội dung.
 - Tài liệu quản lý (Team Charter, Quality, ngân sách) để ở gốc repo, mục lục không nhắc.

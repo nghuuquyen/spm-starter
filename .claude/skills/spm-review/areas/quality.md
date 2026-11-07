@@ -31,7 +31,7 @@ QA, QC, Definition of Done chung, mức độ lỗi, điều kiện release, k�
 - Trước release còn một lỗi mức cao, quy trình của nhóm nói gì: hoãn, release kèm cảnh báo, hay sửa nóng? Ai quyết?
 - Một task được coi là xong khi nào? Cả nhóm có trả lời giống nhau không?
 
-## Lỗi hay gặp
+## Chỗ hay bị sót
 
 - Kế hoạch chất lượng có đủ mục nhưng không có bằng chứng áp dụng.
 - Nhiều thang mức độ lỗi khác nhau ở các file khác nhau.
